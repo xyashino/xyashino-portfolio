@@ -10,9 +10,14 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
+    "clsx": "^2.0.0",
+    "install": "^0.13.0",
     "next": "latest",
+    "next-themes": "^0.2.1",
+    "npm": "^10.1.0",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@types/node": "latest",
