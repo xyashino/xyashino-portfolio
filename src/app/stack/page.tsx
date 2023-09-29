@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <DefaultPageLayout
       title="Stack"
-      className="text-white"
+      className="text-white bg-black"
       linkClassName="hover:bg-yellow hover:text-black hover:border-yellow"
     ></DefaultPageLayout>
   );
