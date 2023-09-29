@@ -6,7 +6,7 @@ interface Props extends React.HTMLAttributes<HTMLTextAreaElement> {
 export const TextArea = ({ label, ...props }: Props) => {
   return (
     <label htmlFor="message" className="mx-auto w-full lg:w-5/6">
-      <p className="lg:text-2xl font-extrabold uppercase font-mono after:content-[':']">
+      <p className="sm:text-2xl  mb-2 font-extrabold uppercase font-mono after:content-[':']">
         {label}
       </p>
       <div className="bg-black relative w-full p-1 lg:p-3">

@@ -10,7 +10,7 @@ export const Input = ({ label, ...props }: Props) => {
       htmlFor={props.id}
       className="mx-auto w-full flex justify-evenly items-center border-b-2 pb-4 border-black"
     >
-      <p className="lg:text-2xl uppercase font-mono font-extrabold italic after:content-[':']">
+      <p className="sm:text-2xl uppercase font-mono font-extrabold italic after:content-[':']">
         {label}
       </p>
       <div className="bg-black relative">
