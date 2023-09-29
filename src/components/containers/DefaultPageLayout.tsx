@@ -6,6 +6,7 @@ interface Props extends PropsWithChildren {
   className?: string;
   title?: string;
   linkClassName?: string;
+  containerClassName?: string;
 }
 
 export const DefaultPageLayout = ({
@@ -13,6 +14,7 @@ export const DefaultPageLayout = ({
   className,
   title,
   linkClassName,
+  containerClassName,
 }: Props) => {
   return (
     <main
@@ -27,9 +29,7 @@ export const DefaultPageLayout = ({
         </h1>
         <GoHomeLink className={linkClassName} />
       </header>
-      <div className="grid place-items-center justify-between lg:grid-cols-2">
-        {children}
-      </div>
+      <div className={containerClassName}>{children}</div>
     </main>
   );
 };

@@ -9,6 +9,7 @@ export default function Projects() {
       title="Contact with me"
       className="text-black bg-yellow"
       linkClassName="text-black hover:bg-black hover:border-black hover:text-yellow transition-colors"
+      containerClassName="grid place-items-center justify-between lg:grid-cols-2"
     >
       <div className="lg:border-r-4 border-black flex flex-col justify-around h-5/6">
         <ContactList />
