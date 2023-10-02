@@ -7,6 +7,7 @@ interface Props extends PropsWithChildren {
   title?: string;
   linkClassName?: string;
   containerClassName?: string;
+  headerClassName?: string;
 }
 
 export const DefaultPageLayout = ({
@@ -15,21 +16,30 @@ export const DefaultPageLayout = ({
   title,
   linkClassName,
   containerClassName,
+  headerClassName,
 }: Props) => {
   return (
     <main
       className={cn(
-        "w-full h-full p-2 lg:p-8 bg-black-light z-40 selection:bg-yellow selection:text-black overflow-y-scroll lg:overflow-hidden",
+        "w-full h-full  bg-black-light z-40 selection:bg-yellow selection:text-black overflow-y-scroll lg:overflow-hidden relative page-animation",
         className,
       )}
+      style={{
+        viewTransitionName: "page",
+      }}
     >
-      <header className="w-full p-2 flex border-b-2 border-b-current items-center justify-around sticky">
-        <h1 className="grow text-2xl lg:text-7xl uppercase  w-full mx-auto font-semibold font-mono italic break-words text-left ">
+      <header
+        className={cn(
+          "w-full p-4 flex border-b-2 border-b-current items-center justify-around sticky z-30 top-0 bg-black",
+          headerClassName,
+        )}
+      >
+        <h1 className="grow text-2xl lg:text-7xl uppercase  w-full mx-auto font-semibold font-mono italic break-words text-left">
           {title}
         </h1>
         <GoHomeLink className={linkClassName} />
       </header>
-      <div className={containerClassName}>{children}</div>
+      <div className={cn("p-2 lg:p-8", containerClassName)}>{children}</div>
     </main>
   );
 };
