@@ -1,1 +1,1 @@
-export const ANIMATE_TEXT = "Szczepan Micek Full Stack Developer";
+export const ANIMATE_TEXT = "Szczepan Micek - Fullstack Developer";

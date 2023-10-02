@@ -1,9 +1,9 @@
 import { NavigationItemProps } from "@/components/NavigationSection/navigationItem";
 import { Navigation } from "@/types/enum/navigation";
-import { Project } from "@/components/icons/Project";
-import { Contact } from "@/components/icons/Contact";
-import { Question } from "@/components/icons/Question";
-import { Stack } from "@/components/icons/Stack";
+import { Project } from "@/components/icons/navigation/Project";
+import { Contact } from "@/components/icons/navigation/Contact";
+import { Question } from "@/components/icons/navigation/Question";
+import { Stack } from "@/components/icons/navigation/Stack";
 
 export const ROUTES: NavigationItemProps[] = [
   {

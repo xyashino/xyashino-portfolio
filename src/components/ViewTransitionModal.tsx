@@ -13,8 +13,10 @@ export const ViewTransitionModal = () => {
   );
 
   const close = () => {
-    sessionStorage.setItem("viewTransition", "true");
-    handleClose();
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("viewTransition", "true");
+      handleClose();
+    }
   };
 
   return (

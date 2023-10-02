@@ -1,7 +1,7 @@
 "use client";
 import useAnimatedRouter from "@/lib/hooks/useAnimatedRouter";
 import { Navigation } from "@/types/enum/navigation";
-import { Home } from "@/components/icons/Home";
+import { Home } from "@/components/icons/navigation/Home";
 import { cn } from "@/lib/utils/cn";
 
 export const GoHomeLink = ({ className }: { className?: string }) => {
