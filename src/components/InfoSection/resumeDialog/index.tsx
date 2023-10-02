@@ -1,5 +1,4 @@
 "use client";
-import { Dialog } from "@headlessui/react";
 import { AnimatedDialog } from "@/components/Dialog";
 import { useDialog } from "@/lib/hooks/useDialog";
 import { DownloadSection } from "./downloadSection";
@@ -18,12 +17,9 @@ export const ResumeDialog = () => {
         Get my Resume
       </Button>
       <AnimatedDialog isOpen={isOpen} close={handleClose}>
-        <Dialog.Title
-          as="h3"
-          className="text-xl lg:text-4xl font-extrabold font-mono leading-6  uppercase italic border-b-2 pb-2"
-        >
+        <h3 className="text-xl lg:text-4xl font-extrabold font-mono leading-6  uppercase italic border-b-2 pb-2">
           Get my Resume
-        </Dialog.Title>
+        </h3>
         <DownloadSection />
       </AnimatedDialog>
     </>
