@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HighlightedText } from "./highlightedText";
-import { DownloadSectionSwitch } from "./downloadSectionSwitch";
+import { LanguageSwitch } from "./languageSwitch";
 import { DowloadResumeBtn } from "./dowloadResumeBtn";
 
 export const DownloadSection = () => {
@@ -12,10 +12,7 @@ export const DownloadSection = () => {
       </p>
       <div className="flex justify-evenly items-center space-x-8 py-2 w-full">
         <HighlightedText highlight={!isEnglish} text="Polish 🇵🇱" />
-        <DownloadSectionSwitch
-          isEnglish={isEnglish}
-          setIsEnglish={setIsEnglish}
-        />
+        <LanguageSwitch isEnglish={isEnglish} setIsEnglish={setIsEnglish} />
         <HighlightedText highlight={isEnglish} text="English 🇬🇧" />
       </div>
       <section>
