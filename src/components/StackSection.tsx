@@ -32,7 +32,7 @@ export const StackSection = ({
       >
         {title}
       </motion.h3>
-      <ul className="text-xl lg:text-3xl overflow-hidden flex flex-col md:flex-row md:flex-wrap md:space-x-4 lg:space-x-8 items-center justify-center selection:text-white selection:bg-accent">
+      <ul className="text-xl lg:text-3xl overflow-hidden flex flex-col md:flex-row md:flex-wrap md:space-x-4 lg:space-x-8 items-center justify-center ">
         {items.map(({ name, icon }, i) => (
           <motion.li
             className="flex w-full md:w-1/3 space-x-2 lg:space-x-4 justify-center items-center transition-all duration-500 ease-in-out bg-white  text-black my-2 py-4 px-12 lg:w-auto"
