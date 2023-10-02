@@ -3,7 +3,7 @@ import { CONTACT_DATA } from "@/config/constants/contact";
 
 export const ContactList = () => {
   return (
-    <div className="flex flex-col my-2 p-2  text-left">
+    <div className="flex flex-col lg:my-2 p-2  text-left">
       {CONTACT_DATA.map(({ title, link, text }, i) => (
         <a
           key={i}
