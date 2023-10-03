@@ -5,6 +5,8 @@ import { type ClassValue } from "clsx";
 import { cn } from "@/lib/utils/cn";
 import useAnimatedRouter from "@/lib/hooks/useAnimatedRouter";
 import { useTheme } from "next-themes";
+import { m } from "framer-motion";
+import { DomAnimation } from "@/components/DomAnimation";
 
 export interface NavigationItemProps {
   to: Navigation;
@@ -47,15 +49,21 @@ export const NavigationItem = ({
     }
   };
   return (
-    <>
-      <button
+    <DomAnimation>
+      <m.button
+        whileHover={{ scale: 0.9 }}
+        whileFocus={{ scale: 0.9 }}
         onMouseEnter={changeColors}
         onMouseLeave={cancelColorChange}
         onFocus={changeColors}
         onBlur={cancelColorChange}
+        transition={{
+          duration: DURATION / 1000,
+          ease: "easeIn",
+        }}
         className={cn(
-          "w-full h-full p-1 lg:p-4 flex flex-col z-20 focus:outline-none text-primary-content  ring-primary-content",
-          "rounded-xl lg:hover:rounded-2xl lg:rounded-none focus:scale-95 focus:rounded-2xl lg:hover:scale-95 transition-all cursor-pointer italic duration-300 ease-in-out",
+          "w-full h-full p-1 lg:p-4 flex flex-col z-20 focus:outline-none text-primary-content  ring-primary-content select-none",
+          "rounded-xl lg:rounded-none focus:scale-95 focus:rounded-2xl  hover:rounded-2xl cursor-pointer italic duration-300 ease-in-out",
           theme === selectedTheme && "ring-4",
           className,
         )}
@@ -70,7 +78,7 @@ export const NavigationItem = ({
             <span className="text-3xl lg:text-5xl xl:text-7xl">{icon}</span>
           )}
         </div>
-      </button>
-    </>
+      </m.button>
+    </DomAnimation>
   );
 };
