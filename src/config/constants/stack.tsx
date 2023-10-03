@@ -7,9 +7,9 @@ import {
   Typescript,
   Zustand,
   Database,
+  GraphQL,
+  Express,
 } from "@/components/icons/stack";
-import { GraphQL } from "@/components/icons/stack/GraphQL";
-import { Express } from "@/components/icons/stack/Express";
 
 export const MAIN_TECHNOLOGIES = [
   {
