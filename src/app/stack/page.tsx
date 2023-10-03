@@ -1,4 +1,3 @@
-"use client";
 import { DefaultPageLayout } from "@/components/containers/DefaultPageLayout";
 import { StackSection } from "@/components/StackSection";
 import {
