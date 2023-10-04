@@ -17,8 +17,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body
         className={cn(
           inter.className,
-          "w-screen h-screen overflow-hidden relative",
+          "w-screen h-screen overflow-hidden relative bg-primary",
         )}
+        style={{ viewTransitionName: "page" }}
       >
         {children}
         <div id="portals" />

@@ -32,10 +32,7 @@ export default async function ArticlePage({
 
   return (
     <PageWrapper>
-      <div
-        className="w-full h-full relative overflow-y-scroll no-scrollbar"
-        style={{ viewTransitionName: "page-horizontal" }}
-      >
+      <div className="w-full h-full relative overflow-y-scroll no-scrollbar bg-white selection:bg-yellow selection:text-accent">
         <header className="w-full p-4 flex border-b-2 border-b-current items-center z-30 top-0 bg-white sticky">
           <Link
             href={Navigation.Projects}
@@ -51,7 +48,9 @@ export default async function ArticlePage({
           <div className="flex flex-col items-center">
             <YoutubeIframe embedId={data.embedId} className="w-3/4" />
             <TagList tags={data.tags} />
-            <p className="p-4 text-2xl font-mono italic">{data.description}</p>
+            <p className="p-4 text-xl font-semibold font-mono italic">
+              {data.description}
+            </p>
           </div>
           <MDXRemote source={content} />
         </article>
