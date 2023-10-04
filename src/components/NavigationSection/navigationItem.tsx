@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 import { Navigation } from "@/types/enum/navigation";
 import { type ClassValue } from "clsx";
 import { cn } from "@/lib/utils/cn";
-import useAnimatedRouter from "@/lib/hooks/useAnimatedRouter";
 import { useTheme } from "next-themes";
 import { m } from "framer-motion";
 import { DomAnimation } from "@/components/DomAnimation";
+import { useRouter } from "next/navigation";
 
 export interface NavigationItemProps {
   to: Navigation;
@@ -26,7 +26,7 @@ export const NavigationItem = ({
   theme: selectedTheme,
 }: NavigationItemProps) => {
   const { theme, setTheme } = useTheme();
-  const { animatedRoute } = useAnimatedRouter();
+  const { push } = useRouter();
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -68,7 +68,10 @@ export const NavigationItem = ({
           className,
         )}
         role="navigation"
-        onClick={() => animatedRoute(to)}
+        onClick={() => {
+          setTheme(selectedTheme);
+          push(to);
+        }}
       >
         <div className="flex items-center justify-evenly w-full mx-auto h-full flex-wrap">
           <p className="text-xl sm:text-3xl lg:text-4xl xl:text-6xl font-mono font-extrabold uppercase">
