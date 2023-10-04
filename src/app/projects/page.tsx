@@ -15,13 +15,14 @@ export default async function Projects() {
       headerClassName="bg-white"
       containerClassName="container mx-auto w-full h-full text-black"
     >
-      <div className="flex flex-col  space-y-12 pb-12">
+      <div className="flex flex-col space-y-12 pb-12">
         {projects.map(({ data, fileName }, i) => (
           <ProjectCard
             key={`${fileName}-${i}`}
             {...data}
             fileName={fileName}
             reverse={!!(i % 2)}
+            index={i}
           />
         ))}
       </div>
