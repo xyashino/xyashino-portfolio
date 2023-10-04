@@ -4,10 +4,12 @@ import { React } from "@/components/icons/stack";
 import { Navigation } from "@/types/enum/navigation";
 import { ProjectCardAnimation } from "@/components/ProjectCard/ProjectCardAnimation";
 import { TagList } from "@/components/ProjectCard/TagList";
+import { YoutubeIframe } from "@/components/YoutubeIframe";
 
 interface Props extends ProjectMetadata {
   reverse?: boolean;
   fileName: string;
+  index: number;
 }
 
 export const ProjectCard = ({
@@ -17,10 +19,11 @@ export const ProjectCard = ({
   reverse = false,
   fileName,
   embedId,
+  index,
 }: Props) => {
   const reverseClass = reverse ? "lg:flex-row-reverse" : "lg:flex-row";
   return (
-    <ProjectCardAnimation reverse={reverse}>
+    <ProjectCardAnimation reverse={reverse} useDelay={index < 2}>
       <div
         className={cn(
           "border rounded-lg font-mono text-accent relative z-10 border-accent flex overflow-hidden flex-col",
@@ -28,13 +31,7 @@ export const ProjectCard = ({
         )}
       >
         <div className="w-full lg:w-1/2 aspect-video bg-accent relative flex items-center">
-          <iframe
-            src={`https://www.youtube.com/embed/${embedId}`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Embedded youtube"
-            className="aspect-video w-full"
-          />
+          <YoutubeIframe embedId={embedId} />
         </div>
         <div className="p-8 flex flex-col w-full lg:w-1/2 justify-between">
           <div>
@@ -43,7 +40,7 @@ export const ProjectCard = ({
             </h3>
             <TagList tags={tags} />
           </div>
-          <p className="lg:p-2 text-sm lg:text-md">{description}</p>
+          <p className="lg:p-2 text-sm lg:text-xl">{description}</p>
           <Link
             className="mx-auto lg:text-2xl mt-4 uppercase italic font-extrabold border-2 py-2 px-12 border-black hover:bg-blue  hover:border-blue hover:text-white transition-all duration-300 ease-in-out"
             href={`${Navigation.Projects}/${fileName}`}

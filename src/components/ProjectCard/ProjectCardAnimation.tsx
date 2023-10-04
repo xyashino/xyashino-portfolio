@@ -4,9 +4,14 @@ import { useInView } from "framer-motion";
 
 interface Props extends PropsWithChildren<any> {
   reverse: boolean;
+  useDelay?: boolean;
 }
 
-export const ProjectCardAnimation = ({ children, reverse }: Props) => {
+export const ProjectCardAnimation = ({
+  children,
+  reverse,
+  useDelay = false,
+}: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -19,10 +24,11 @@ export const ProjectCardAnimation = ({ children, reverse }: Props) => {
     ? "translate-x-0"
     : "-translate-x-48";
 
+  const delayClass = useDelay ? "delay-500" : "";
   return (
     <div ref={ref} className="flex flex-col space-y-12 pb-12">
       <div
-        className={`delay-500 transition-all duration-700 ease-in-out  ${opacityClass} ${transformClass}`}
+        className={` transition-all duration-700 ease-in-out  ${opacityClass} ${transformClass} ${delayClass}`}
       >
         {children}
       </div>
