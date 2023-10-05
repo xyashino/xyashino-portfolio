@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getArticleByFileName, getArticleNames } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Arrow } from "@/components/icons/Arrow";
-import { PROJECTS_DIR_PATH } from "@/config/constants/md";
+import { PROJECTS_DIR_PATH } from "@/config/constants/common";
 import { YoutubeIframe } from "@/components/YoutubeIframe";
 import { TagList } from "@/components/ProjectCard/TagList";
 import { Navigation } from "@/types/enum/navigation";

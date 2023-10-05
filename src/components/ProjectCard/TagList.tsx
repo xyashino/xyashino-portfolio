@@ -1,5 +1,3 @@
-import { React } from "@/components/icons/stack";
-
 interface Props {
   tags: string[];
 }

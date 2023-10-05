@@ -1,8 +1,7 @@
 import { DefaultPageLayout } from "@/components/containers/DefaultPageLayout";
-import { React } from "@/components/icons/stack";
 import { ProjectCard } from "@/components/ProjectCard";
 import { getProjectsData } from "@/lib/mdx";
-import { PROJECTS_DIR_PATH } from "@/config/constants/md";
+import { PROJECTS_DIR_PATH } from "@/config/constants/common";
 
 export default async function Projects() {
   const projects = await getProjectsData<ProjectMetadata>(PROJECTS_DIR_PATH);
