@@ -1,4 +1,3 @@
-"use client";
 import { PropsWithChildren, useEffect } from "react";
 import { AnimatePresence, m } from "framer-motion";
 import { useFocusTrap } from "@/lib/hooks/useFocusTrap";

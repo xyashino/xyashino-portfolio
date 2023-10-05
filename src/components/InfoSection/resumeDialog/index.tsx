@@ -17,10 +17,12 @@ export const ResumeDialog = () => {
         Get my Resume
       </Button>
       <Dialog isOpen={isOpen} close={handleClose}>
-        <h3 className="text-xl lg:text-4xl font-extrabold font-mono leading-6  uppercase italic border-b-2 pb-2">
-          Get my Resume
-        </h3>
-        <DownloadSection />
+        <div className="bg-accent p-8">
+          <h3 className="text-xl lg:text-4xl font-extrabold font-mono leading-6  uppercase italic border-b-2 pb-2">
+            Get my Resume
+          </h3>
+          <DownloadSection />
+        </div>
       </Dialog>
     </>
   );
