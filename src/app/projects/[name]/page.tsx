@@ -37,7 +37,7 @@ export default async function ArticlePage({
   const { content, data } = article;
 
   return (
-    <PageWrapper>
+    <PageWrapper className="bg-white">
       <div className="w-full h-full relative overflow-y-scroll no-scrollbar bg-white selection:bg-yellow selection:text-accent">
         <header className="w-full p-4 flex border-b-2 border-b-current items-center z-30 top-0 bg-white sticky">
           <Link

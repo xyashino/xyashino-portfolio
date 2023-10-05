@@ -2,8 +2,13 @@
 import { m, AnimatePresence } from "framer-motion";
 import { DomAnimation } from "@/components/DomAnimation";
 import { PropsWithChildren } from "react";
+import { cn } from "@/lib/utils/cn";
 
-export const PageWrapper = ({ children }: PropsWithChildren) => (
+interface Prose extends PropsWithChildren {
+  className?: string;
+}
+
+export const PageWrapper = ({ children, className }: Prose) => (
   <DomAnimation>
     <AnimatePresence mode="popLayout">
       <m.div
@@ -14,7 +19,7 @@ export const PageWrapper = ({ children }: PropsWithChildren) => (
           ease: "easeInOut",
           duration: 0.4,
         }}
-        className="w-full h-full"
+        className={cn("w-full h-full bg-primary", className)}
       >
         {children}
       </m.div>
