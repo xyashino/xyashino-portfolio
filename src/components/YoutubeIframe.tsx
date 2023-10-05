@@ -1,4 +1,3 @@
-import { React } from "@/components/icons/stack";
 import { cn } from "@/lib/utils/cn";
 
 interface Props {

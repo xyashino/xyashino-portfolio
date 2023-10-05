@@ -1,10 +1,10 @@
 "use client";
-import { AnimatedDialog } from "@/components/Dialog";
+import { Dialog } from "@/components/Dialog";
 import { useDialog } from "@/lib/hooks/useDialog";
-import { DownloadSection } from "./downloadSection";
+import { DownloadSection, DownloadSectionProps } from "./downloadSection";
 import { Button } from "@/components/Button";
 
-export const ResumeDialog = () => {
+export const ResumeDialog = (props: DownloadSectionProps) => {
   const { isOpen, handleOpen, handleClose } = useDialog();
 
   return (
@@ -16,12 +16,14 @@ export const ResumeDialog = () => {
       >
         Get my Resume
       </Button>
-      <AnimatedDialog isOpen={isOpen} close={handleClose}>
-        <h3 className="text-xl lg:text-4xl font-extrabold font-mono leading-6  uppercase italic border-b-2 pb-2">
-          Get my Resume
-        </h3>
-        <DownloadSection />
-      </AnimatedDialog>
+      <Dialog isOpen={isOpen} close={handleClose}>
+        <div className="bg-accent p-8">
+          <h3 className="text-xl lg:text-4xl font-extrabold font-mono leading-6  uppercase italic border-b-2 pb-2">
+            Get my Resume
+          </h3>
+          <DownloadSection {...props} />
+        </div>
+      </Dialog>
     </>
   );
 };

@@ -1,21 +1,20 @@
-export const EMAIL = "xyashino@gmial.com";
-export const PHONE = "+48 666 666 666";
-export const LINKEDIN = "https://www.linkedin.com/in/szczepan-micek-1b1b1b1b1/";
+const { NEXT_PUBLIC_EMAIL, NEXT_PUBLIC_PHONE, NEXT_PUBLIC_LINKEDIN } =
+  process.env;
 
 export const CONTACT_DATA = [
   {
     title: "By email:",
-    link: `mailto:${EMAIL}`,
-    text: EMAIL,
+    link: `mailto:${NEXT_PUBLIC_EMAIL}`,
+    text: NEXT_PUBLIC_EMAIL,
   },
   {
     title: "By phone:",
-    link: `tel:${PHONE}`,
-    text: PHONE,
+    link: `tel:${NEXT_PUBLIC_PHONE}`,
+    text: NEXT_PUBLIC_PHONE,
   },
   {
     title: "By LinkedIn:",
-    link: `https://www.linkedin.com/in/aleksander-wojciechowski-1b1b3b1b0/`,
+    link: NEXT_PUBLIC_LINKEDIN,
     text: "Szczepan M.",
   },
 ];

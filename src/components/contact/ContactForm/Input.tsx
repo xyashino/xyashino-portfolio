@@ -2,6 +2,7 @@ import React from "react";
 
 interface Props extends React.HTMLAttributes<HTMLInputElement> {
   label: string;
+  autocomplete?: string;
 }
 
 export const Input = ({ label, ...props }: Props) => {

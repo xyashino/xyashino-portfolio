@@ -1,9 +1,8 @@
 "use client";
 import { m } from "framer-motion";
-import { React } from "@/components/icons/stack";
-import { StackItem } from "@/types/stack";
 import { cn } from "@/lib/utils/cn";
 import { DomAnimation } from "@/components/DomAnimation";
+import { StackItem } from "@/types/stack";
 import {
   stackTileVariant,
   stackTitleVariant,

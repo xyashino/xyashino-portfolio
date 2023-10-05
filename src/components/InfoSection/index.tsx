@@ -1,11 +1,26 @@
 import { ResumeDialog } from "./resumeDialog";
 import { InfiniteScrollText } from "@/components/InfiniteScrollText";
-import { ANIMATE_TEXT } from "@/config/constants/text";
+
+const {
+  NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT,
+  NEXT_PUBLIC_RESUME_URL_PL,
+  NEXT_PUBLIC_RESUME_URL_EN,
+} = process.env;
+
+if (!NEXT_PUBLIC_RESUME_URL_PL || !NEXT_PUBLIC_RESUME_URL_EN) {
+  throw new Error("Missing resume url");
+}
+if (!NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT)
+  throw new Error("Missing background text");
+
 export const InfoSection = () => {
   return (
     <section className="w-full grow justify-center flex flex-col relative overflow-hidden">
-      <ResumeDialog />
-      <InfiniteScrollText text={ANIMATE_TEXT} />
+      <ResumeDialog
+        polishResumeUrl={NEXT_PUBLIC_RESUME_URL_PL}
+        englishResumeUrl={NEXT_PUBLIC_RESUME_URL_EN}
+      />
+      <InfiniteScrollText text={NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT} />
     </section>
   );
 };

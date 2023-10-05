@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
-import { React } from "@/components/icons/stack";
 import { Navigation } from "@/types/enum/navigation";
 import { ProjectCardAnimation } from "@/components/ProjectCard/ProjectCardAnimation";
 import { TagList } from "@/components/ProjectCard/TagList";

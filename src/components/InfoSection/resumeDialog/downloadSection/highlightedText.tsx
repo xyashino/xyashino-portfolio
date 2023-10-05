@@ -10,7 +10,7 @@ export const HighlightedText = ({ text, highlight }: Props) => {
   return (
     <p
       className={cn(
-        "text-sm lg:text-xl font-extrabold uppercase italic font-mono transition-colors text-center",
+        "text-md lg:text-xl font-extrabold uppercase italic font-mono transition-colors text-center",
         highlight && `bg-secondary text-secondary-content`,
       )}
     >

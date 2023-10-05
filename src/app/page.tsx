@@ -5,18 +5,18 @@ import { PageWrapper } from "@/components/containers/PageWrapper";
 
 export default function Home() {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="white"
-      themes={["black", "yellow", "white", "blue"] as Theme[]}
-      disableTransitionOnChange={false}
-    >
-      <PageWrapper>
-        <main className="bg-primary text-primary-content h-full transition-colors duration-300 pt-0 w-full flex flex-col justify-between">
+    <PageWrapper>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="white"
+        themes={["black", "yellow", "white", "blue"] as Theme[]}
+        disableTransitionOnChange={false}
+      >
+        <main className="bg-primary text-primary-content h-full transition-colors duration-300 w-full flex flex-col justify-between">
           <InfoSection />
           <NavigationSection />
         </main>
-      </PageWrapper>
-    </ThemeProvider>
+      </ThemeProvider>
+    </PageWrapper>
   );
 }
