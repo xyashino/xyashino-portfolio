@@ -23,6 +23,7 @@
     "npm": "^10.1.0",
     "react": "latest",
     "react-dom": "latest",
+    "resend": "^1.1.0",
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
