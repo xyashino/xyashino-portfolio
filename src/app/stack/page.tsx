@@ -16,11 +16,11 @@ export default function Projects() {
     >
       <StackSection
         items={MAIN_TECHNOLOGIES}
-        title="In my projects I use"
+        title="I worked with"
         delay={0.3}
       />
       <StackSection
-        title="I also used"
+        title="and also with (but not so much)"
         items={OTHER_TECHNOLOGIES}
         titleClassName="lg:text-5xl"
         delay={MAIN_TECHNOLOGIES.length * 0.2 + 1.3}
