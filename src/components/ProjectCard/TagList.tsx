@@ -4,7 +4,7 @@ interface Props {
 
 export const TagList = ({ tags }: Props) => {
   return (
-    <div className="flex flex-wrap text-center pt-4 mb-2 font-semibold select-none">
+    <div className="flex flex-wrap text-center pt-4 p-2 mb-2 font-semibold select-none">
       {tags.map((tag, i) => (
         <span
           key={`${tag}-${i}`}
