@@ -8,6 +8,7 @@ import { YoutubeIframe } from "@/components/YoutubeIframe";
 import { TagList } from "@/components/ProjectCard/TagList";
 import { Navigation } from "@/types/enum/navigation";
 import { PageWrapper } from "@/components/containers/PageWrapper";
+import { ContrastCard } from "@/components/ContrastCard";
 
 type ParamsWithName = {
   params: {
@@ -44,16 +45,16 @@ export default async function ArticlePage({
             {data.title}
           </h1>
         </header>
-        <article className="container mx-auto  p-8">
+        <section className="container mx-auto mb-16">
           <div className="flex flex-col items-center">
-            <YoutubeIframe embedId={data.embedId} className="w-3/4" />
+            <YoutubeIframe embedId={data.embedId} className="w-full lg:w-3/4" />
+            <ContrastCard>{data.description}</ContrastCard>
             <TagList tags={data.tags} />
-            <p className="p-4 text-xl font-semibold font-mono italic">
-              {data.description}
-            </p>
           </div>
-          <MDXRemote source={content} />
-        </article>
+          <article className="prose lg:prose-xl mx-auto prose-a:text-blue prose-code:font-extrabold mt-4">
+            <MDXRemote source={content} />
+          </article>
+        </section>
       </div>
     </PageWrapper>
   );
