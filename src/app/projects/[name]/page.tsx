@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { getArticleByFileName, getArticleNames } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Arrow } from "@/components/icons/Arrow";
-import { PROJECTS_DIR_PATH } from "@/config/constants/common";
 import { YoutubeIframe } from "@/components/YoutubeIframe";
 import { TagList } from "@/components/ProjectCard/TagList";
 import { Navigation } from "@/types/enum/navigation";
@@ -16,12 +15,18 @@ type ParamsWithName = {
   };
 };
 
+const { PROJECTS_DIR_PATH } = process.env;
+if (!PROJECTS_DIR_PATH) throw new Error("Missing projects dir path");
+
 export const generateStaticParams = async () =>
   getArticleNames(PROJECTS_DIR_PATH);
 
 export default async function ArticlePage({
   params: { name },
 }: ParamsWithName) {
+  const { PROJECTS_DIR_PATH } = process.env;
+  if (!PROJECTS_DIR_PATH) throw new Error("Missing projects dir path");
+
   const article = await getArticleByFileName<ProjectMetadata>(
     name,
     PROJECTS_DIR_PATH,

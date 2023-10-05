@@ -1,10 +1,10 @@
 "use client";
 import { Dialog } from "@/components/Dialog";
 import { useDialog } from "@/lib/hooks/useDialog";
-import { DownloadSection } from "./downloadSection";
+import { DownloadSection, DownloadSectionProps } from "./downloadSection";
 import { Button } from "@/components/Button";
 
-export const ResumeDialog = () => {
+export const ResumeDialog = (props: DownloadSectionProps) => {
   const { isOpen, handleOpen, handleClose } = useDialog();
 
   return (
@@ -21,7 +21,7 @@ export const ResumeDialog = () => {
           <h3 className="text-xl lg:text-4xl font-extrabold font-mono leading-6  uppercase italic border-b-2 pb-2">
             Get my Resume
           </h3>
-          <DownloadSection />
+          <DownloadSection {...props} />
         </div>
       </Dialog>
     </>

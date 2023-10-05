@@ -2,10 +2,18 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { HighlightedText } from "./highlightedText";
 import { LanguageSwitch } from "./languageSwitch";
-import { ENG_RESUME_URL, PL_RESUME_URL } from "@/config/constants/resume";
 
-export const DownloadSection = () => {
+export interface DownloadSectionProps {
+  englishResumeUrl: string;
+  polishResumeUrl: string;
+}
+
+export const DownloadSection = ({
+  polishResumeUrl,
+  englishResumeUrl,
+}: DownloadSectionProps) => {
   const [isEnglish, setIsEnglish] = useState(true);
+
   return (
     <div className="flex-col flex items-center justify-center space-y-2 lg:space-y-4 m-2">
       <p className="text-2xl lg:text-3xl font-extrabold uppercase italic font-mono text-center">
@@ -17,7 +25,7 @@ export const DownloadSection = () => {
         <HighlightedText highlight={isEnglish} text="English 🇬🇧" />
       </div>
       <Link
-        href={isEnglish ? ENG_RESUME_URL : PL_RESUME_URL}
+        href={isEnglish ? englishResumeUrl : polishResumeUrl}
         rel="noopener noreferrer"
         target="_blank"
         className="block cursor-pointer py-2 px-8 lg:text-xl italic uppercase font-bold border-2 border-2-white text-center hover:bg-secondary hover:text-secondary-content transition-colors duration-300 ease-in-out hover:border-secondary"
