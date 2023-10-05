@@ -61,7 +61,10 @@ export const NavigationItem = ({
         "w-full h-full z-20 focus:outline-none text-primary-content hover:rounded-2xl focus:rounded-2xl duration-150 select-none cursor-pointer ring-2",
         className,
       )}
-      onClick={() => push(to)}
+      onClick={() => {
+        setTheme(selectedTheme);
+        push(to);
+      }}
     >
       <div className="flex items-center justify-evenly w-full mx-auto h-full flex-wrap italic p-1">
         <p className="text-xl sm:text-3xl lg:text-4xl xl:text-6xl font-mono font-extrabold uppercase">
