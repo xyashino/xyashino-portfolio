@@ -37,7 +37,7 @@ export default async function ArticlePage({
         <header className="w-full p-4 flex border-b-2 border-b-current items-center z-30 top-0 bg-white sticky">
           <Link
             href={Navigation.Projects}
-            className="hover:bg-black hover:text-white border-black text-black text-7xl transition-colors duration-300 rounded-full"
+            className="hover:bg-black hover:text-white border-black text-black text-4xl lg:text-7xl transition-colors duration-300 rounded-full"
           >
             <Arrow className="rotate-180" />
           </Link>
@@ -48,10 +48,12 @@ export default async function ArticlePage({
         <section className="container mx-auto mb-16">
           <div className="flex flex-col items-center">
             <YoutubeIframe embedId={data.embedId} className="w-full lg:w-3/4" />
-            <ContrastCard>{data.description}</ContrastCard>
+            <ContrastCard className="w-full lg:w-3/4">
+              {data.description}
+            </ContrastCard>
             <TagList tags={data.tags} />
           </div>
-          <article className="prose lg:prose-xl mx-auto prose-a:text-blue prose-code:font-extrabold mt-4">
+          <article className=" p-2 prose lg:prose-xl mx-auto prose-a:text-blue prose-code:font-extrabold mt-4">
             <MDXRemote source={content} />
           </article>
         </section>
