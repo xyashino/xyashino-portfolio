@@ -1,9 +1,11 @@
 import { NavigationItem } from "@/components/NavigationSection/navigationItem";
 import { Navigation } from "@/types/enum/navigation";
-import { Contact } from "@/components/icons/navigation/Contact";
-import { Project } from "@/components/icons/navigation/Project";
-import { Question } from "@/components/icons/navigation/Question";
-import { Stack } from "@/components/icons/navigation/Stack";
+import {
+  Contact,
+  Project,
+  Question,
+  Stack,
+} from "@/components/icons/navigation";
 
 export const NavigationSection = () => {
   return (
