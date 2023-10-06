@@ -8,7 +8,7 @@ export interface ResultDialogProps {
   handleClose?: () => void;
 }
 
-export const ResultDialog = ({
+export const EmailDialog = ({
   isOpen,
   message,
   handleClose,

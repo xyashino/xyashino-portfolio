@@ -5,9 +5,9 @@ import { Input } from "./Input";
 import { TextArea } from "./TextArea";
 import { sendEmail } from "@/lib/actions/send-email";
 import {
-  ResultDialog,
+  EmailDialog,
   ResultDialogProps,
-} from "@/components/dialogs/ResultDialog";
+} from "@/components/dialogs/EmailDialog";
 
 export const ContactForm = () => {
   const [result, setResult] = useState<Omit<ResultDialogProps, "handleClose">>({
@@ -59,7 +59,7 @@ export const ContactForm = () => {
           Send
         </Button>
       </form>
-      <ResultDialog {...result} handleClose={handleClose} />
+      <EmailDialog {...result} handleClose={handleClose} />
     </div>
   );
 };
