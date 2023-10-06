@@ -17,7 +17,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body
         className={cn(
           inter.className,
-          "w-screen h-screen overflow-hidden relative bg-primary",
+          "w-screen h-[100dvh]  overflow-hidden relative bg-primary",
         )}
       >
         {children}

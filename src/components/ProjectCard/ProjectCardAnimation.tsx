@@ -24,7 +24,7 @@ export const ProjectCardAnimation = ({
     ? "translate-x-0"
     : "-translate-x-48";
 
-  const delayClass = useDelay ? "delay-500" : "";
+  const delayClass = useDelay ? "lg:delay-500" : "";
   return (
     <div ref={ref} className="flex flex-col space-y-12 pb-12">
       <div

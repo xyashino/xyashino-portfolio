@@ -15,8 +15,8 @@ export const DownloadSection = ({
   const [isEnglish, setIsEnglish] = useState(true);
 
   return (
-    <div className="flex-col flex items-center justify-center space-y-2 lg:space-y-4 m-2">
-      <p className="text-2xl lg:text-3xl font-extrabold uppercase italic font-mono text-center">
+    <div className="flex-col flex items-center justify-center space-y-2 lg:space-y-4 m-2 max-w-11/12">
+      <p className="text-md lg:text-3xl font-extrabold uppercase italic font-mono text-center">
         Select language of resume
       </p>
       <div className="flex justify-evenly items-center space-x-8 py-2 w-full">

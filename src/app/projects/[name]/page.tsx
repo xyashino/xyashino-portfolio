@@ -46,7 +46,7 @@ export default async function ArticlePage({
           >
             <Arrow className="rotate-180" />
           </Link>
-          <h1 className="ml-auto text-2xl lg:text-7xl uppercase  mx-auto font-semibold font-mono italic break-words text-left">
+          <h1 className="ml-auto text-2xl lg:text-7xl uppercase  mx-auto font-extrabold font-mono italic break-words text-left">
             {data.title}
           </h1>
         </header>
