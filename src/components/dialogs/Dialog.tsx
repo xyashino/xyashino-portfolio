@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils/cn";
 
 interface Props extends PropsWithChildren {
   isOpen: boolean;
-  close: () => void;
+  close?: () => void;
   className?: string;
   bgClassName?: string;
 }
@@ -15,7 +15,7 @@ export const Dialog = ({ children, isOpen, close, bgClassName }: Props) => {
   const focusRef = useFocusTrap();
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") close();
+      if (event.key === "Escape") close && close();
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => {

@@ -4,21 +4,30 @@ import { Button } from "@/components/Button";
 import { Input } from "./Input";
 import { TextArea } from "./TextArea";
 import { sendEmail } from "@/lib/actions/send-email";
-import { ResultDialog, ResultDialogProps } from "@/components/ResultDialog";
+import {
+  ResultDialog,
+  ResultDialogProps,
+} from "@/components/dialogs/ResultDialog";
 
 export const ContactForm = () => {
   const [result, setResult] = useState<Omit<ResultDialogProps, "handleClose">>({
     isOpen: false,
     message: "",
+    isLoading: false,
   });
 
   const handleAction = async (e: FormData) => {
+    setResult({ isOpen: true, message: "Sending message...", isLoading: true });
     const result = await sendEmail(e);
-    setResult({ isOpen: true, message: result.error ?? result.message ?? "" });
+    setResult({
+      isOpen: true,
+      message: result.error ?? result.message ?? "",
+      isLoading: false,
+    });
   };
 
   const handleClose = () => {
-    setResult({ isOpen: false, message: "" });
+    setResult({ isOpen: false, message: "", isLoading: false });
   };
 
   return (

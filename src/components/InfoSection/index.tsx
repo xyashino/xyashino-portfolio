@@ -1,4 +1,4 @@
-import { ResumeDialog } from "./resumeDialog";
+import { ResumeDialog } from "../dialogs/ResumeDialog";
 import { InfiniteScrollText } from "@/components/InfiniteScrollText";
 
 const {
