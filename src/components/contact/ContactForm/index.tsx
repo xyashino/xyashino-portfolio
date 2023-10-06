@@ -32,7 +32,7 @@ export const ContactForm = () => {
   const setLoadingState = () => {
     setResult({
       isOpen: true,
-      message: "Sending message...",
+      message: "Sending a message...",
       isLoading: true,
     });
   };
