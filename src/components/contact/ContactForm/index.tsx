@@ -17,7 +17,6 @@ export const ContactForm = () => {
   });
 
   const handleAction = async (e: FormData) => {
-    setResult({ isOpen: true, message: "Sending message...", isLoading: true });
     const result = await sendEmail(e);
     setResult({
       isOpen: true,
@@ -30,6 +29,14 @@ export const ContactForm = () => {
     setResult({ isOpen: false, message: "", isLoading: false });
   };
 
+  const setLoadingState = () => {
+    setResult({
+      isOpen: true,
+      message: "Sending message...",
+      isLoading: true,
+    });
+  };
+
   return (
     <div className="mt-4 p-4 lg:p-8 mx-2 lg:mx-auto flex flex-col items-center justify-around w-full">
       <h3 className="font-extrabold uppercase text-2xl md:text-4xl lg:text-6xl italic text-left border-b-2 lg:border-b-4 pb-4 border-current w-full">
@@ -37,6 +44,7 @@ export const ContactForm = () => {
       </h3>
       <form
         action={handleAction}
+        onSubmit={setLoadingState}
         className="flex flex-col space-y-2 mx-auto w-full mt-4"
       >
         <Input
