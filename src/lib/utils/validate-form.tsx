@@ -10,5 +10,7 @@ export const ValidateForm = ({ message, name, email }: FormValues) => {
   if (!email) throw new Error("Email is required");
   if (!message) throw new Error("Message is required");
   if (!email.includes("@")) throw new Error("Email is invalid");
+  if (!email.includes(".")) throw new Error("Email is invalid");
+  if (email.length < 5) throw new Error("Email is invalid");
   return { message, name, email };
 };

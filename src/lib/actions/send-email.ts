@@ -11,9 +11,9 @@ if (!RESEND_API_KEY || !RESEND_FROM || !RESEND_TO)
 const resend = new Resend(RESEND_API_KEY);
 
 export const sendEmail = async (e: FormData) => {
-  const email = e.get("email")?.toString();
-  const name = e.get("name")?.toString();
-  const message = e.get("message")?.toString();
+  const email = e.get("email")?.toString().trim();
+  const name = e.get("name")?.toString().trim();
+  const message = e.get("message")?.toString().trim();
 
   try {
     const validatedData = ValidateForm({ email, name, message });
