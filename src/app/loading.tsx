@@ -1,5 +1,5 @@
+import { LoadingContainer } from "@/components/containers/LoadingContainer";
+
 export default function Loading() {
-  return (
-    <div className="fixed inset-0 bg-primary duration-150 transition-colors" />
-  );
+  return <LoadingContainer className="bg-primary text-primary-content" />;
 }

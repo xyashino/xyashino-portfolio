@@ -1,3 +1,5 @@
+import { LoadingContainer } from "@/components/containers/LoadingContainer";
+
 export default function Loading() {
-  return <div className="fixed inset-0 bg-white" />;
+  return <LoadingContainer className="bg-white text-black" />;
 }
