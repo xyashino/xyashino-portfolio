@@ -17,6 +17,7 @@ export const sendEmail = async (e: FormData) => {
 
   try {
     const validatedData = ValidateForm({ email, name, message });
+    if (Array.isArray(validatedData)) return { error: validatedData };
     await resend.emails.send({
       from: RESEND_FROM,
       to: RESEND_TO,
@@ -24,13 +25,13 @@ export const sendEmail = async (e: FormData) => {
       html: getHtmlEmailTemplate(validatedData),
     });
     return {
-      message: `Message was sent! Will be in touch in the near future.`,
+      message: ["Message was sent! Will be in touch in the near future."],
     };
   } catch (e: unknown) {
     let error = "Something went wrong!";
     if (e instanceof Error) error = e.message;
     if (typeof e === "string") error = e;
     console.error(e);
-    return { error };
+    return { error: [error] };
   }
 };

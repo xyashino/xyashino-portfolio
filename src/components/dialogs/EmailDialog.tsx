@@ -3,14 +3,14 @@ import { Loading } from "@/components/icons/Loading";
 
 export interface ResultDialogProps {
   isOpen: boolean;
-  message: string;
+  messages: string[];
   isLoading: boolean;
   handleClose?: () => void;
 }
 
 export const EmailDialog = ({
   isOpen,
-  message,
+  messages,
   handleClose,
   isLoading,
 }: ResultDialogProps) => {
@@ -21,7 +21,11 @@ export const EmailDialog = ({
       bgClassName="bg-black/80"
     >
       <div className="flex bg-yellow flex-col items-center justify-center space-y-4 font-extrabold font-mono uppercase italic p-8 text-black select-none">
-        <h3 className="text-2xl  text-center">{message}</h3>
+        {messages.map((message, index) => (
+          <p key={index} className="text-2xl  text-center">
+            {message}
+          </p>
+        ))}
         {isLoading ? (
           <Loading className="text-4xl lg:text-7xl" />
         ) : (

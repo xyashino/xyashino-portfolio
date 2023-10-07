@@ -5,12 +5,19 @@ interface FormValues {
 }
 
 export const ValidateForm = ({ message, name, email }: FormValues) => {
-  if (!name && !email && !message) throw new Error("Empty form");
-  if (!name) throw new Error("Name is required");
-  if (!email) throw new Error("Email is required");
-  if (!message) throw new Error("Message is required");
-  if (!email.includes("@")) throw new Error("Email is invalid");
-  if (!email.includes(".")) throw new Error("Email is invalid");
-  if (email.length < 5) throw new Error("Email is invalid");
+  const errors: string[] = [];
+  if (!name && !email && !message) errors.push("All fields are required");
+  if (errors.length > 0) return errors;
+
+  if (!name) errors.push("Name is required");
+  if (!email) errors.push("Email is required");
+  if (!message) errors.push("Message is required");
+  if (errors.length > 0) return errors;
+
+  if (!email?.includes("@")) errors.push("Email should include @");
+  if (!email?.includes(".")) errors.push("Email should include '.'");
+  if (email?.length && email.length < 5) errors.push("Email is too short");
+  if (errors.length > 0) return errors;
+
   return { message, name, email };
 };

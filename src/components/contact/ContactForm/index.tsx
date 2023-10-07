@@ -12,7 +12,7 @@ import {
 export const ContactForm = () => {
   const [result, setResult] = useState<Omit<ResultDialogProps, "handleClose">>({
     isOpen: false,
-    message: "",
+    messages: [],
     isLoading: false,
   });
 
@@ -20,19 +20,19 @@ export const ContactForm = () => {
     const result = await sendEmail(e);
     setResult({
       isOpen: true,
-      message: result.error ?? result.message ?? "",
+      messages: result.error ?? result.message ?? [],
       isLoading: false,
     });
   };
 
   const handleClose = () => {
-    setResult({ isOpen: false, message: "", isLoading: false });
+    setResult({ isOpen: false, messages: [], isLoading: false });
   };
 
   const setLoadingState = () => {
     setResult({
       isOpen: true,
-      message: "Sending a message...",
+      messages: ["Sending a message..."],
       isLoading: true,
     });
   };
