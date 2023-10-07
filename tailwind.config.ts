@@ -9,11 +9,16 @@ module.exports = {
     extend: {
       animation: {
         scrollText: "scrollText 21s linear infinite",
+        fadeIn: "fadeIn .6s ease-in-out forwards",
       },
       keyframes: {
         scrollText: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
+        },
+        fadeIn: {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
         },
       },
       colors: {
