@@ -1,4 +1,4 @@
-interface TemplateData {
+export interface TemplateData {
   email: string;
   message: string;
   name: string;
