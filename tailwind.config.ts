@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       animation: {
         scrollText: "scrollText 21s linear infinite",
-        fadeIn: "fadeIn .6s ease-in-out forwards",
+        fadeIn: "fadeIn .3s ease-in-out forwards",
       },
       keyframes: {
         scrollText: {
