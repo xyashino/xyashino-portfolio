@@ -1,10 +1,10 @@
 "use server";
-import { ValidateForm } from "@/lib/utils/validate-form";
 import { Resend } from "resend";
 import {
   getHtmlEmailTemplate,
   TemplateData,
 } from "@/lib/utils/get-html-email-template";
+import { validateForm } from "@/lib/utils/validate-form";
 
 const { RESEND_API_KEY, RESEND_FROM, RESEND_TO } = process.env;
 
@@ -19,7 +19,7 @@ export const sendEmail = async (e: FormData) => {
   const message = e.get("message")?.toString().trim();
 
   try {
-    const validatedData = ValidateForm({ email, name, message });
+    const validatedData = validateForm({ email, name, message });
     if (Array.isArray(validatedData)) return { error: validatedData };
     await resend.emails.send({
       from: RESEND_FROM,
