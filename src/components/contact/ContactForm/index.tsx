@@ -8,6 +8,7 @@ import {
   EmailDialog,
   ResultDialogProps,
 } from "@/components/dialogs/EmailDialog";
+import { validateForm } from "@/lib/utils/validate-form";
 
 export const ContactForm = () => {
   const [result, setResult] = useState<Omit<ResultDialogProps, "handleClose">>({
@@ -17,6 +18,23 @@ export const ContactForm = () => {
   });
 
   const handleAction = async (e: FormData) => {
+    const data: FormValues = {
+      name: e.get("name") as string,
+      email: e.get("email") as string,
+      message: e.get("message") as string,
+    };
+
+    const validationResult = validateForm(data);
+
+    if (Array.isArray(validationResult)) {
+      setResult({
+        isOpen: true,
+        messages: validationResult,
+        isLoading: false,
+      });
+      return;
+    }
+
     const result = await sendEmail(e);
     setResult({
       isOpen: true,

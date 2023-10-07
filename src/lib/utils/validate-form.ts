@@ -1,10 +1,4 @@
-interface FormValues {
-  name?: string;
-  email?: string;
-  message?: string;
-}
-
-export const ValidateForm = ({ message, name, email }: FormValues) => {
+export const validateForm = ({ message, name, email }: FormValues) => {
   const errors: string[] = [];
   if (!name && !email && !message) errors.push("All fields are required");
   if (errors.length > 0) return errors;
