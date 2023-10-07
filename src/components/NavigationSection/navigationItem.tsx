@@ -3,7 +3,6 @@ import React, { useEffect, useState, useCallback } from "react";
 import { Navigation } from "@/types/enum/navigation";
 import { cn } from "@/lib/utils/cn";
 import { useTheme } from "next-themes";
-import { m } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 export interface NavigationItemProps {
@@ -46,19 +45,13 @@ export const NavigationItem = ({
   }, [timeoutId]);
 
   return (
-    <m.div
-      whileHover={{ scale: 0.9 }}
-      whileFocus={{ scale: 0.9 }}
+    <button
       onMouseEnter={changeColors}
       onMouseLeave={cancelColorChange}
       onFocus={changeColors}
       onBlur={cancelColorChange}
-      transition={{
-        duration: DURATION / 1000,
-        ease: "easeIn",
-      }}
       className={cn(
-        "w-full h-full z-20 focus:outline-none text-primary-content hover:rounded-2xl focus:rounded-2xl duration-150 select-none cursor-pointer ring-2",
+        `w-full h-full z-20 focus:outline-none text-primary-content hover:rounded-2xl focus:rounded-2xl  select-none cursor-pointer ring-2 focus:scale-90 hover:scale-90 duration-${DURATION}`,
         className,
       )}
       onClick={() => {
@@ -74,6 +67,6 @@ export const NavigationItem = ({
           <span className="text-3xl lg:text-5xl xl:text-7xl">{icon}</span>
         )}
       </div>
-    </m.div>
+    </button>
   );
 };
