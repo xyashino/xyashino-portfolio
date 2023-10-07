@@ -9,10 +9,10 @@ export default function Projects() {
   return (
     <DefaultPageLayout
       title="Stack"
-      className="text-white bg-accent"
+      className="text-white bg-black"
       linkClassName="hover:bg-yellow hover:text-black hover:border-yellow"
       containerClassName="lg:flex lg:flex-col lg:justify-center lg:items-center lg:space-y-8 w-full lg:mb-24"
-      headerClassName="bg-accent"
+      headerClassName="bg-black"
     >
       <StackSection
         items={MAIN_TECHNOLOGIES}
