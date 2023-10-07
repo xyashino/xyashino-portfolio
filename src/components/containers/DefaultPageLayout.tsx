@@ -23,7 +23,7 @@ export const DefaultPageLayout = ({
   return (
     <main
       className={cn(
-        "w-full h-full  bg-black-light z-40 selection:bg-yellow selection:text-black overflow-y-scroll lg:overflow-hidden relative",
+        "w-full h-full  bg-black-light z-40 selection:bg-yellow selection:text-black overflow-y-scroll lg:overflow-hidden relative animate-fadeIn",
         className,
       )}
       style={{ viewTransitionName: "page-vertical , page-horizontal" }}

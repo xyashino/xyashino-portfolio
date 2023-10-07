@@ -10,7 +10,7 @@ export default function Home() {
       themes={["black", "yellow", "white", "blue"] as Theme[]}
       disableTransitionOnChange={false}
     >
-      <main className="bg-primary text-primary-content transition-colors duration-300 w-full h-full flex flex-col justify-between">
+      <main className="bg-primary text-primary-content transition-colors duration-300 w-full h-full flex flex-col justify-between animate-fadeIn">
         <InfoSection />
         <NavigationSection />
       </main>
