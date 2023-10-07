@@ -10,7 +10,7 @@ interface Prose extends PropsWithChildren {
 
 export const PageWrapper = ({ children, className }: Prose) => (
   <DomAnimation>
-    <AnimatePresence mode="popLayout">
+    <AnimatePresence mode="wait">
       <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
