@@ -1,10 +1,14 @@
-import { ValidateForm } from "@/lib/utils/validate-form";
+interface TemplateData {
+  email: string;
+  message: string;
+  name: string;
+}
 
 export const getHtmlEmailTemplate = ({
   email,
   message,
   name,
-}: ReturnType<typeof ValidateForm>) => {
+}: TemplateData) => {
   return `
     <!DOCTYPE html>
 <html>
