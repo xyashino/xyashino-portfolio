@@ -29,6 +29,7 @@ export const Dialog = ({ children, isOpen, close, bgClassName }: Props) => {
         <AnimatePresence initial={isOpen}>
           {isOpen && (
             <m.div
+              data-testid="modal"
               key="modal"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}

@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { DisplayAnimatedSlide } from "@/components/EducationSlider/DisplayAnimatedSlide";
+import { DisplayAnimatedSlide } from "@/components/about/EducationSlider/DisplayAnimatedSlide";
 import { useSlider } from "@/lib/hooks/useSlider";
-import { SlideController } from "@/components/EducationSlider/SlideController";
+import { SlideController } from "@/components/about/EducationSlider/SlideController";
 import { DomAnimation } from "@/components/DomAnimation";
 import { m } from "framer-motion";
 import { SlideItem } from "@/types/slide";

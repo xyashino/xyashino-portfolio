@@ -28,7 +28,7 @@ export const ProjectCardAnimation = ({
   return (
     <div ref={ref} className="flex flex-col space-y-12 pb-12">
       <div
-        className={` transition-all duration-700 ease-in-out  ${opacityClass} ${transformClass} ${delayClass}`}
+        className={`transition-all duration-700 ease-in-out  ${opacityClass} ${transformClass} ${delayClass}`}
       >
         {children}
       </div>

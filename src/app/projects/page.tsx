@@ -1,5 +1,5 @@
 import { DefaultPageLayout } from "@/components/containers/DefaultPageLayout";
-import { ProjectCard } from "@/components/ProjectCard";
+import { ProjectCard } from "@/components/projects/ProjectCard";
 import { getProjectsData } from "@/lib/mdx";
 
 export default async function Projects() {

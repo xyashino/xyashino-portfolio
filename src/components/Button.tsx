@@ -26,6 +26,7 @@ export const Button = ({
           "bg-primary border-current border-2 m-2 font-extrabold   absolute inset-0 -skew-y-3 group-hover:skew-y-3 group-focus:skew-y-3 transition-transform duration-300 z-10",
           skewClassName,
         )}
+        data-testid="skew"
       />
       <span
         className={cn(

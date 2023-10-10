@@ -1,5 +1,5 @@
 import React from "react";
-import { Slide } from "@/components/EducationSlider/Slide";
+import { Slide } from "@/components/about/EducationSlider/Slide";
 import { m } from "framer-motion";
 import { SlideItem } from "@/types/slide";
 
