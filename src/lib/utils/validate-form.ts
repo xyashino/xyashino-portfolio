@@ -1,4 +1,8 @@
-export const validateForm = ({ message, name, email }: FormValues) => {
+export const validateForm = ({
+  message,
+  name,
+  email,
+}: FormValues): FormValidationResult => {
   const errors: string[] = [];
   if (!name && !email && !message) errors.push("All fields are required");
   if (errors.length > 0) return errors;
@@ -12,6 +16,8 @@ export const validateForm = ({ message, name, email }: FormValues) => {
   if (!email?.includes(".")) errors.push("Email should include '.'");
   if (email?.length && email.length < 5) errors.push("Email is too short");
   if (errors.length > 0) return errors;
+
+  if (!message || !name || !email) return ["All fields are required"];
 
   return { message, name, email };
 };

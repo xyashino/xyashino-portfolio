@@ -3,3 +3,7 @@ interface FormValues {
   email?: string | null;
   message?: string | null;
 }
+
+type FormValidationSuccessResult = NotNullish<FormValues>;
+
+type FormValidationResult = string[] | FormValidationSuccessResult;
