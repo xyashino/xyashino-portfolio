@@ -15,6 +15,8 @@ export const LanguageSwitch = ({ isEnglish, setIsEnglish }: Props) => {
         onKeyDown={(e) => {
           if (e.key === "Enter") setIsEnglish((prev) => !prev);
         }}
+        role="switch"
+        aria-checked
       >
         <span className="sr-only">Switch language</span>
         <span
