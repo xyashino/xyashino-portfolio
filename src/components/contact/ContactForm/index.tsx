@@ -68,16 +68,25 @@ export const ContactForm = () => {
         <Input
           label="Name"
           id="name"
+          name="name"
           placeholder="Type name..."
-          autocomplete="given-name"
+          autoComplete="given-name"
+          defaultValue=""
         />
         <Input
           label="Email"
           id="email"
+          name="email"
           placeholder="Type emial..."
-          autocomplete="email"
+          autoComplete="email"
+          defaultValue=""
         />
-        <TextArea label="Message" id="message" placeholder="Type Message..." />
+        <TextArea
+          label="Message"
+          id="message"
+          name="message"
+          placeholder="Type Message..."
+        />
         <Button
           className="bg-black text-white min-w-[300px] mx-auto mt-6"
           skewClassName="bg-black"
