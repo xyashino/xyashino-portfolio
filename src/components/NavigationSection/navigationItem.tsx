@@ -44,6 +44,11 @@ export const NavigationItem = ({
     };
   }, [timeoutId]);
 
+  const handleClick = useCallback(() => {
+    setTheme(selectedTheme);
+    push(to);
+  }, [selectedTheme, setTheme, push, to]);
+
   return (
     <button
       onMouseEnter={changeColors}
@@ -54,10 +59,9 @@ export const NavigationItem = ({
         `w-full h-full z-20 focus:outline-none text-primary-content hover:rounded-2xl focus:rounded-2xl  select-none cursor-pointer ring-2 focus:scale-90 hover:scale-90 duration-${DURATION}`,
         className,
       )}
-      onClick={() => {
-        setTheme(selectedTheme);
-        push(to);
-      }}
+      onClick={handleClick}
+      onKeyDown={(e) => e.key === "Enter" && handleClick()}
+      role="button"
     >
       <div className="flex items-center justify-evenly w-full mx-auto h-full flex-wrap italic p-1">
         <p className="text-xl sm:text-3xl lg:text-4xl xl:text-6xl font-mono font-extrabold uppercase">

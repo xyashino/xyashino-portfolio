@@ -1,5 +1,5 @@
-import { ResumeDialog } from "../dialogs/ResumeDialog";
 import { InfiniteScrollText } from "@/components/InfiniteScrollText";
+import { ResumeDialog } from "@/components/dialogs/ResumeDialog";
 
 const {
   NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT,

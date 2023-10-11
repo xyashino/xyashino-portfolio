@@ -21,7 +21,7 @@ export const Dialog = ({ children, isOpen, close, bgClassName }: Props) => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isOpen, close]);
+  }, [close]);
 
   return (
     <div ref={focusRef}>
@@ -29,14 +29,15 @@ export const Dialog = ({ children, isOpen, close, bgClassName }: Props) => {
         <AnimatePresence initial={isOpen}>
           {isOpen && (
             <m.div
+              data-testid="modal"
               key="modal"
               initial={{ x: "100%" }}
-              animate={{ x: 0 }}
+              animate={{ x: "0%" }}
+              exit={{ x: "100%" }}
               transition={{
                 ease: "easeInOut",
                 duration: 0.3,
               }}
-              exit={{ x: "100%" }}
               className={cn(
                 "fixed inset-0 flex justify-center items-center bg-secondary/80 z-50",
                 bgClassName,

@@ -13,6 +13,7 @@ export const HighlightedText = ({ text, highlight }: Props) => {
         "text-md lg:text-xl font-extrabold uppercase italic font-mono transition-colors text-center",
         highlight && `bg-secondary text-secondary-content`,
       )}
+      data-testid="highlighted-text"
     >
       {text}
     </p>

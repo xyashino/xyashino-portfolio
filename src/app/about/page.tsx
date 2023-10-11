@@ -1,7 +1,7 @@
 import React from "react";
 import { DefaultPageLayout } from "@/components/containers/DefaultPageLayout";
-import { EducationSlider } from "@/components/EducationSlider";
-import { TextAnimation } from "@/components/TextAnimation";
+import { EducationSlider } from "@/components/about/EducationSlider";
+import { TextAnimation } from "@/components/about/TextAnimation";
 import { About, EDUCATION_DESCRIPTION } from "@/config/constants/about";
 
 export default function Projects() {

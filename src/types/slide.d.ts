@@ -5,5 +5,10 @@ interface SlideItem {
   title: string;
   subtitle: string;
   content: string | React.ReactNode;
-  image?: ImageProps;
+  image?: Overwrite<
+    ImageProps,
+    {
+      alt: string;
+    } & DataTypeAttribute
+  >;
 }

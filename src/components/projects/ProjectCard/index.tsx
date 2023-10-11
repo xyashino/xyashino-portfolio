@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
 import { Navigation } from "@/types/enum/navigation";
-import { ProjectCardAnimation } from "@/components/ProjectCard/ProjectCardAnimation";
-import { TagList } from "@/components/ProjectCard/TagList";
-import { YoutubeIframe } from "@/components/YoutubeIframe";
+import { ProjectCardAnimation } from "./projectCardAnimation";
+import { TagList } from "@/components/TagList";
+import { YoutubeIframe } from "@/components/projects/YoutubeIframe";
 
 interface Props extends ProjectMetadata {
   reverse?: boolean;

@@ -18,6 +18,7 @@ export const TextAnimation = ({ words }: Props) => {
         variants={textContainerVariant}
         initial="hidden"
         animate="visible"
+        data-testid="text-animation"
       >
         {words.map((letter, i) => (
           <m.span key={i} variants={wordVariant} className="mr-3">

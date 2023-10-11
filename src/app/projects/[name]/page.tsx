@@ -3,8 +3,8 @@ import { notFound } from "next/navigation";
 import { getArticleByFileName, getArticleNames } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Arrow } from "@/components/icons/Arrow";
-import { YoutubeIframe } from "@/components/YoutubeIframe";
-import { TagList } from "@/components/ProjectCard/TagList";
+import { YoutubeIframe } from "@/components/projects/YoutubeIframe";
+import { TagList } from "@/components/TagList";
 import { Navigation } from "@/types/enum/navigation";
 import { ContrastCard } from "@/components/ContrastCard";
 
