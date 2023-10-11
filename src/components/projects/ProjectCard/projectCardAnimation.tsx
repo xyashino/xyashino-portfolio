@@ -16,19 +16,15 @@ export const ProjectCardAnimation = ({
   const isInView = useInView(ref, { once: true });
 
   const opacityClass = isInView ? "opacity-100" : "opacity-0";
-  const transformClass = reverse
-    ? isInView
-      ? "translate-x-0"
-      : "translate-x-48"
-    : isInView
-    ? "translate-x-0"
-    : "-translate-x-48";
-
+  const reverseTransformClass = isInView ? "translate-x-0" : "translate-x-48";
+  const transformClass = isInView ? "translate-x-0" : "-translate-x-48";
+  const toggleTransformClass = reverse ? reverseTransformClass : transformClass;
   const delayClass = useDelay ? "lg:delay-500" : "";
+
   return (
     <div ref={ref} className="flex flex-col space-y-12 pb-12">
       <div
-        className={`transition-all duration-700 ease-in-out  ${opacityClass} ${transformClass} ${delayClass}`}
+        className={`transition-all duration-700 ease-in-out  ${opacityClass} ${toggleTransformClass} ${delayClass}`}
       >
         {children}
       </div>
