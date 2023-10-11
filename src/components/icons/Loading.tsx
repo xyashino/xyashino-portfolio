@@ -6,6 +6,7 @@ export const Loading = (props: SVGProps<SVGSVGElement>) => (
     width="1em"
     height="1em"
     viewBox="0 0 24 24"
+    data-testid="loading"
     {...props}
   >
     <path

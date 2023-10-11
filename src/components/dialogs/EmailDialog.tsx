@@ -20,7 +20,10 @@ export const EmailDialog = ({
       close={isLoading ? undefined : handleClose}
       bgClassName="bg-black/80"
     >
-      <div className="flex bg-yellow flex-col items-center justify-center space-y-4 font-extrabold font-mono uppercase italic p-8 text-black select-none">
+      <div
+        className="flex bg-yellow flex-col items-center justify-center space-y-4 font-extrabold font-mono uppercase italic p-8 text-black select-none"
+        data-testid="email-dialog"
+      >
         {messages.map((message, index) => (
           <p key={index} className="text-2xl  text-center">
             {message}
