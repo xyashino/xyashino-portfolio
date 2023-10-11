@@ -86,6 +86,7 @@ export const ContactForm = () => {
           id="message"
           name="message"
           placeholder="Type Message..."
+          defaultValue=""
         />
         <Button
           className="bg-black text-white min-w-[300px] mx-auto mt-6"

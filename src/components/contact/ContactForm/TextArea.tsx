@@ -2,6 +2,7 @@ import React, { HTMLProps } from "react";
 
 interface Props extends HTMLProps<HTMLTextAreaElement>, DataTypeAttribute {
   label: string;
+  defaultValue: string;
 }
 export const TextArea = ({ label, ...props }: Props) => {
   return (
