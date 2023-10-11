@@ -9,6 +9,8 @@ import {
   Database,
   GraphQL,
   Express,
+  Vitest,
+  ReactTestingLibrary,
 } from "@/components/icons/stack";
 
 export const MAIN_TECHNOLOGIES = [
@@ -66,5 +68,16 @@ export const OTHER_TECHNOLOGIES = [
   {
     name: "Express",
     icon: <Express />,
+  },
+  {
+    name: "Unit Testing",
+  },
+  {
+    name: "Vitest",
+    icon: <Vitest />,
+  },
+  {
+    name: "R.T.L.",
+    icon: <ReactTestingLibrary />,
   },
 ];
