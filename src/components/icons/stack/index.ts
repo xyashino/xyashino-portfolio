@@ -9,3 +9,4 @@ export * from "./Database";
 export * from "./Express";
 export * from "./GraphQL";
 export * from "./Vitest";
+export * from "./ReactTestingLibrary";
