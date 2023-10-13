@@ -1,10 +1,7 @@
 "use server";
 import { Resend } from "resend";
-import {
-  getHtmlEmailTemplate,
-  TemplateData,
-} from "@/lib/utils/get-html-email-template";
 import { validateForm } from "@/lib/utils/validate-form";
+import { EmailTemplate } from "@/components/EmailTemplate";
 
 const { RESEND_API_KEY, RESEND_FROM, RESEND_TO } = process.env;
 
@@ -25,7 +22,7 @@ export const sendEmail = async (e: FormData) => {
       from: RESEND_FROM,
       to: RESEND_TO,
       subject: `New message from ${validatedData.name}!`,
-      html: getHtmlEmailTemplate(validatedData as TemplateData),
+      react: EmailTemplate(validatedData),
     });
     return {
       message: ["Message was sent! Will be in touch in the near future."],
