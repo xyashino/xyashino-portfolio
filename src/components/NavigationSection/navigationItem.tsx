@@ -64,7 +64,7 @@ export const NavigationItem = ({
       role="button"
     >
       <div className="flex items-center justify-evenly w-full mx-auto h-full flex-wrap italic p-1">
-        <p className="text-xl sm:text-3xl lg:text-4xl xl:text-6xl font-mono font-extrabold uppercase">
+        <p className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-mono font-extrabold uppercase">
           {text}
         </p>
         {icon && (

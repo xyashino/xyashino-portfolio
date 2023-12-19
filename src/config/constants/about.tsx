@@ -1,6 +1,6 @@
 import { SlideItem } from "@/types/slide";
 
-export const EDUCATION_DESCRIPTION = `I began my programming journey during the pandemic at the age of 20. After initially diving into tutorials, I took a significant break. However, I've since rebounded and transitioned to developing real projects, which are showcased on my GitHub. While I'm currently pursuing part-time studies in Computer Science, I have the capacity to work full-time. My passion lies in full-stack development, and I consistently dedicate my free time to personal growth and enhancing my skills.`;
+export const EDUCATION_DESCRIPTION = `Hello! I'm a 20-year-old IT student eager to start a full-time role in the industry. My GitHub and personal website display my programming projects, emphasizing my proficiency in TypeScript, a technology I prefer for its flexibility in both functional and OOP programming. This choice reflects my ability to easily adapt to different technologies. While I haven't yet had the chance to gain commercial experience, I’m actively acquiring skills on my own. My drive to learn and grow is immense. Give me the opportunity, and I will dedicate myself to becoming a more skilled programmer every day.`;
 export const About: SlideItem[] = [
   {
     title: "PCEIKZ Szczucin",
@@ -24,5 +24,11 @@ export const About: SlideItem[] = [
     subtitle: "2023-2027",
     content:
       "1st year of engineering studies in Computer Science, in progress.",
+  },
+  {
+    title: "OPANUJ FRONT-END AI EDITION:",
+    subtitle: "2024 UPCOMING",
+    content:
+      "Course focuses on advanced frontend development skills, emphasizing frontend architecture, best practices, and quality engineering.",
   },
 ];
