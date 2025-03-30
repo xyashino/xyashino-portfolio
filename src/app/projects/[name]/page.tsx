@@ -1,37 +1,37 @@
-import { ContrastCard } from "@/components/contrast-card";
-import { Arrow } from "@/components/icons/Arrow";
-import { YoutubeIframe } from "@/components/projects/YoutubeIframe";
-import { TagList } from "@/components/tag-list";
-import { getArticleByFileName, getArticleNames } from "@/lib/mdx";
-import { Navigation } from "@/types/enum/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import Link from "next/link";
-import { notFound } from "next/navigation";
+import { ContrastCard } from '@/components/contrast-card'
+import { Arrow } from '@/components/icons/Arrow'
+import { YoutubeIframe } from '@/components/projects/youtube-iframe'
+import { TagList } from '@/components/tag-list'
+import { getArticleByFileName, getArticleNames } from '@/lib/mdx'
+import { Navigation } from '@/types/enum/navigation'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
 type ParamsWithName = {
   params: {
-    name: string;
-  };
-};
+    name: string
+  }
+}
 
-const { PROJECTS_DIR_PATH } = process.env;
-if (!PROJECTS_DIR_PATH) throw new Error("Missing projects dir path");
+const { PROJECTS_DIR_PATH } = process.env
+if (!PROJECTS_DIR_PATH) throw new Error('Missing projects dir path')
 
 export const generateStaticParams = async () =>
-  getArticleNames(PROJECTS_DIR_PATH);
+  getArticleNames(PROJECTS_DIR_PATH)
 
 export default async function ProjectPage({ params }: ParamsWithName) {
-  const { PROJECTS_DIR_PATH } = process.env;
-  if (!PROJECTS_DIR_PATH) throw new Error("Missing projects dir path");
-  const name = (await params).name;
+  const { PROJECTS_DIR_PATH } = process.env
+  if (!PROJECTS_DIR_PATH) throw new Error('Missing projects dir path')
+  const name = (await params).name
   const article = await getArticleByFileName<ProjectMetadata>(
     name,
-    PROJECTS_DIR_PATH,
-  );
+    PROJECTS_DIR_PATH
+  )
 
-  if (!article) return notFound();
+  if (!article) return notFound()
 
-  const { content, data } = article;
+  const { content, data } = article
 
   return (
     <div className="w-full h-full relative overflow-y-scroll no-scrollbar bg-white selection:bg-yellow selection:text-accent">
@@ -59,5 +59,5 @@ export default async function ProjectPage({ params }: ParamsWithName) {
         </article>
       </section>
     </div>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import { LoadingContainer } from "@/components/containers/LoadingContainer";
+import { LoadingContainer } from '@/components/containers/loading-container'
 
 export default function Loading() {
-  return <LoadingContainer className="bg-primary text-primary-content" />;
+  return <LoadingContainer className="bg-primary text-primary-content" />
 }

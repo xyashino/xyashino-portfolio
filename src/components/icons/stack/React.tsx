@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react'
 
 export const React = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -20,4 +20,4 @@ export const React = (props: SVGProps<SVGSVGElement>) => (
       </defs>
     </g>
   </svg>
-);
+)

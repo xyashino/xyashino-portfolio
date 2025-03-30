@@ -1,9 +1,6 @@
-import { DefaultPageLayout } from "@/components/containers/DefaultPageLayout";
-import { StackSection } from "@/components/stack/StackSection";
-import {
-  MAIN_TECHNOLOGIES,
-  OTHER_TECHNOLOGIES,
-} from "@/config/constants/stack";
+import { DefaultPageLayout } from '@/components/containers/default-page-layout'
+import { StackSection } from '@/components/stack/stack-section'
+import { MAIN_TECHNOLOGIES, OTHER_TECHNOLOGIES } from '@/config/constants/stack'
 
 export default function Projects() {
   return (
@@ -26,5 +23,5 @@ export default function Projects() {
         delay={MAIN_TECHNOLOGIES.length * 0.2 + 1.3}
       />
     </DefaultPageLayout>
-  );
+  )
 }

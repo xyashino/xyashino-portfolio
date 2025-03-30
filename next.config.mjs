@@ -1,10 +1,10 @@
-import createMDX from "@next/mdx";
+import createMDX from '@next/mdx'
 
 const nextConfig = {
-  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-  transpilePackages: ["next-mdx-remote"],
-};
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  transpilePackages: ['next-mdx-remote']
+}
 
-const withMDX = createMDX({});
+const withMDX = createMDX({})
 
-export default withMDX(nextConfig);
+export default withMDX(nextConfig)

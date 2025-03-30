@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react'
 
 export const NodeJs = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -15,4 +15,4 @@ export const NodeJs = (props: SVGProps<SVGSVGElement>) => (
       clipRule="evenodd"
     ></path>
   </svg>
-);
+)

@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 interface StackItem {
-  name: string;
-  icon?: ReactNode;
+  name: string
+  icon?: ReactNode
 }

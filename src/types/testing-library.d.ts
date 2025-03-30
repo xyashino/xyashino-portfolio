@@ -1,4 +1,4 @@
-import "@testing-library/jest-dom";
+import '@testing-library/jest-dom'
 
 declare global {
   namespace Vi {
@@ -8,4 +8,4 @@ declare global {
   }
 }
 
-import type {TestingLibraryMatchers} from "@testing-library/jest-dom/matchers";
+import type { TestingLibraryMatchers } from '@testing-library/jest-dom/matchers'

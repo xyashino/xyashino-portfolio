@@ -1,28 +1,28 @@
-"use client";
-import { DisplayAnimatedSlide } from "@/components/about/EducationSlider/DisplayAnimatedSlide";
-import { SlideController } from "@/components/about/EducationSlider/SlideController";
-import { DomAnimation } from "@/components/dom-animation";
-import { useSlider } from "@/lib/hooks/useSlider";
-import { SlideItem } from "@/types/slide";
-import { m } from "framer-motion";
+'use client'
+import { DisplayAnimatedSlide } from '@/components/about/EducationSlider/display-animated-slide'
+import { SlideController } from '@/components/about/EducationSlider/slide-controller'
+import { DomAnimation } from '@/components/dom-animation'
+import { useSlider } from '@/lib/hooks/useSlider'
+import { SlideItem } from '@/types/slide'
+import { m } from 'framer-motion'
 
 interface Props {
-  slides: SlideItem[];
+  slides: SlideItem[]
 }
 
 export const EducationSlider = ({ slides }: Props) => {
-  const { nextSlide, prevSlide, currentIndex } = useSlider(slides.length - 1);
+  const { nextSlide, prevSlide, currentIndex } = useSlider(slides.length - 1)
 
   return (
     <DomAnimation>
       <m.section
         className="w-11/12 lg:w-5/6 overflow-hidden"
-        initial={{ opacity: 0, translateY: "100%" }}
+        initial={{ opacity: 0, translateY: '100%' }}
         animate={{ opacity: 1, translateY: 0 }}
         transition={{
           duration: 0.3,
-          ease: "easeIn",
-          delay: 0.3,
+          ease: 'easeIn',
+          delay: 0.3
         }}
       >
         <div className="items-end justify-between flex sm:pe-6 lg:pe-8 mb-4">
@@ -37,5 +37,5 @@ export const EducationSlider = ({ slides }: Props) => {
         <DisplayAnimatedSlide currentIndex={currentIndex} slides={slides} />
       </m.section>
     </DomAnimation>
-  );
-};
+  )
+}

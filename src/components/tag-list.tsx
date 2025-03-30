@@ -1,5 +1,5 @@
 interface Props {
-  tags: string[];
+  tags: string[]
 }
 
 export const TagList = ({ tags }: Props) => {
@@ -14,5 +14,5 @@ export const TagList = ({ tags }: Props) => {
         </span>
       ))}
     </div>
-  );
-};
+  )
+}

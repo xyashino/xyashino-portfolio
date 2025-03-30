@@ -1,32 +1,32 @@
 interface Props {
-  email: string;
-  message: string;
-  name: string;
+  email: string
+  message: string
+  name: string
 }
 export const EmailTemplate = ({ email, name, message }: Props) => {
   return (
     <div
       style={{
-        fontFamily: "Arial, sans-serif",
-        fontSize: "18px",
-        maxWidth: "600px",
-        margin: "0 auto",
-        padding: "10px",
-        border: "1px solid #e0e0e0",
-        backgroundColor: "blue",
+        fontFamily: 'Arial, sans-serif',
+        fontSize: '18px',
+        maxWidth: '600px',
+        margin: '0 auto',
+        padding: '10px',
+        border: '1px solid #e0e0e0',
+        backgroundColor: 'blue'
       }}
     >
       <header
         style={{
-          textAlign: "center",
-          color: "white",
-          textTransform: "uppercase",
-          marginBottom: "20px",
+          textAlign: 'center',
+          color: 'white',
+          textTransform: 'uppercase',
+          marginBottom: '20px'
         }}
       >
         <h2
           style={{
-            fontSize: "24px",
+            fontSize: '24px'
           }}
         >
           Nowa wiadomość z formularza kontaktowego
@@ -34,9 +34,9 @@ export const EmailTemplate = ({ email, name, message }: Props) => {
       </header>
       <div
         style={{
-          padding: "20px",
-          backgroundColor: "#fff",
-          border: "1px solid #e0e0e0",
+          padding: '20px',
+          backgroundColor: '#fff',
+          border: '1px solid #e0e0e0'
         }}
       >
         <p>
@@ -51,5 +51,5 @@ export const EmailTemplate = ({ email, name, message }: Props) => {
         <p>{message}</p>
       </div>
     </div>
-  );
-};
+  )
+}

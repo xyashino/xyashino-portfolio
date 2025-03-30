@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@/app/theme-provider";
 import { InfoSection } from "@/components/info-section";
-import { NavigationSection } from "@/components/NavigationSection";
+import { NavigationSection } from "@/components/navigation-section";
 
 export default function Home() {
   return (

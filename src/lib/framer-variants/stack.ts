@@ -1,4 +1,4 @@
-import { Variants } from "framer-motion";
+import { Variants } from 'framer-motion'
 
 export const stackTitleVariant: Variants = {
   hidden: { opacity: 0, y: 100 },
@@ -6,12 +6,12 @@ export const stackTitleVariant: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: "easeInOut",
+      ease: 'easeInOut',
       duration: 0.5,
-      delay: delay,
-    },
-  }),
-};
+      delay: delay
+    }
+  })
+}
 
 export const stackTileVariant: Variants = {
   hidden: { scale: 0, opacity: 0 },
@@ -19,9 +19,9 @@ export const stackTileVariant: Variants = {
     scale: 1,
     opacity: 1,
     transition: {
-      ease: "easeInOut",
+      ease: 'easeInOut',
       duration: 0.5,
-      delay: delay,
-    },
-  }),
-};
+      delay: delay
+    }
+  })
+}

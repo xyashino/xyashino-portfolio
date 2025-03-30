@@ -12,5 +12,5 @@ export const InfiniteScrollText = ({ text }: { text: string }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
