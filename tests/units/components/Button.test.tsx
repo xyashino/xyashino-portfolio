@@ -1,7 +1,7 @@
-import { describe, expect, test, vi, beforeEach } from "vitest";
-import { fireEvent, render, screen } from "@testing-library/react";
-import { Button } from "@/components/Button";
-import { ComponentProps } from "react";
+import {Button} from "@/components/button";
+import {fireEvent, render, screen} from "@testing-library/react";
+import {ComponentProps} from "react";
+import {beforeEach, describe, expect, test, vi} from "vitest";
 
 describe("Button", () => {
   let btnText: string;
@@ -16,8 +16,8 @@ describe("Button", () => {
       textClassName: "test-text-class",
       onClick: vi.fn(),
     };
-    const { rerender: rerenderComponent } = render(
-      <Button {...props}>{btnText}</Button>,
+    const {rerender: rerenderComponent} = render(
+      <Button {...props}>{btnText}</Button>
     );
     rerender = (newProps = props) =>
       rerenderComponent(<Button {...newProps}>{btnText}</Button>);

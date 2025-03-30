@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import {Button} from "@/components/button";
 import { Dialog } from "@/components/dialogs/Dialog";
 import { useDialog } from "@/lib/hooks/useDialog";
-import { Button } from "@/components/Button";
-import { HighlightedText } from "./highlightedText";
-import { LanguageSwitch } from "./languageSwitch";
 import Link from "next/link";
+import {useState} from "react";
+import { HighlightedText } from "./highlightedText";
+import {LanguageSwitch} from "./languageSwitch";
 
 interface Props {
   polishResumeUrl: string;

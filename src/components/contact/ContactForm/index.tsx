@@ -1,14 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import { Button } from "@/components/Button";
+import {Button} from "@/components/button";
+import {EmailDialog, ResultDialogProps} from "@/components/dialogs/EmailDialog";
+import {sendEmail} from "@/lib/actions/send-email";
+import {validateForm} from "@/lib/utils/validate-form";
+import {useState} from "react";
 import { Input } from "./Input";
-import { TextArea } from "./TextArea";
-import { sendEmail } from "@/lib/actions/send-email";
-import {
-  EmailDialog,
-  ResultDialogProps,
-} from "@/components/dialogs/EmailDialog";
-import { validateForm } from "@/lib/utils/validate-form";
+import {TextArea} from "./TextArea";
 
 export const ContactForm = () => {
   const [result, setResult] = useState<Omit<ResultDialogProps, "handleClose">>({

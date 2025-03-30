@@ -1,12 +1,9 @@
 "use client";
-import { m } from "framer-motion";
-import { cn } from "@/lib/utils/cn";
-import { DomAnimation } from "@/components/DomAnimation";
-import { StackItem } from "@/types/stack";
-import {
-  stackTileVariant,
-  stackTitleVariant,
-} from "@/lib/framer-variants/stack";
+import {DomAnimation} from "@/components/dom-animation";
+import {stackTileVariant, stackTitleVariant} from "@/lib/framer-variants/stack";
+import {cn} from "@/lib/utils/cn";
+import {StackItem} from "@/types/stack";
+import {m} from "framer-motion";
 
 interface Props {
   title: string;
