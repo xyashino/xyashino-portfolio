@@ -13,5 +13,18 @@ export default {
     useTabs: false,
     quoteProps: "as-needed",
     tabWidth: 2,
+    importOrder: [
+      "^(react/(.*)$)|^(react$)",
+      "^(next/(.*)$)|^(next$)",
+      "<THIRD_PARTY_MODULES>",
+      "",
+      "^@/types/(.*)$",
+      "^@/components/(.*)$",
+      "^@/lib/(.*)$",
+      "^@/(.*)$",
+      "^[./]",
+    ],
+    importOrderSeparation: true,
+    importOrderSortSpecifiers: true,
   },
 };

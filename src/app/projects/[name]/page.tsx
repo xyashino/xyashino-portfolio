@@ -1,12 +1,12 @@
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { getArticleByFileName, getArticleNames } from "@/lib/mdx";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { ContrastCard } from "@/components/ContrastCard";
 import { Arrow } from "@/components/icons/Arrow";
 import { YoutubeIframe } from "@/components/projects/YoutubeIframe";
 import { TagList } from "@/components/TagList";
+import { getArticleByFileName, getArticleNames } from "@/lib/mdx";
 import { Navigation } from "@/types/enum/navigation";
-import { ContrastCard } from "@/components/ContrastCard";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
 type ParamsWithName = {
   params: {
@@ -20,12 +20,10 @@ if (!PROJECTS_DIR_PATH) throw new Error("Missing projects dir path");
 export const generateStaticParams = async () =>
   getArticleNames(PROJECTS_DIR_PATH);
 
-export default async function ArticlePage({
-  params: { name },
-}: ParamsWithName) {
+export default async function ProjectPage({ params }: ParamsWithName) {
   const { PROJECTS_DIR_PATH } = process.env;
   if (!PROJECTS_DIR_PATH) throw new Error("Missing projects dir path");
-
+  const name = (await params).name;
   const article = await getArticleByFileName<ProjectMetadata>(
     name,
     PROJECTS_DIR_PATH,
@@ -44,7 +42,7 @@ export default async function ArticlePage({
         >
           <Arrow className="rotate-180" />
         </Link>
-        <h1 className="ml-auto text-2xl lg:text-7xl uppercase  mx-auto font-extrabold font-mono italic break-words text-left">
+        <h1 className="ml-auto text-2xl lg:text-7xl uppercase mx-auto font-extrabold font-mono italic break-words text-left">
           {data.title}
         </h1>
       </header>
@@ -56,7 +54,7 @@ export default async function ArticlePage({
           </ContrastCard>
           <TagList tags={data.tags} />
         </div>
-        <article className=" p-2 prose lg:prose-xl mx-auto prose-a:text-blue prose-code:font-extrabold mt-4">
+        <article className="p-2 prose lg:prose-xl mx-auto prose-a:text-blue prose-code:font-extrabold mt-4">
           <MDXRemote source={content} />
         </article>
       </section>
