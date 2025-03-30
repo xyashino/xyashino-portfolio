@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@/app/theme-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import { InfoSection } from "@/components/info-section";
 import { NavigationSection } from "@/components/navigation-section";
 

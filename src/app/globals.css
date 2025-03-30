@@ -2,9 +2,6 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --animation-scrollText: scrollText 21s linear infinite;
-  --animation-fadeIn: fadeIn 0.3s ease-in-out forwards;
-
   --color-primary: var(--primary);
   --color-primary-content: var(--primary-content);
   --color-secondary: var(--secondary);
@@ -16,7 +13,7 @@
   --color-white: var(--white);
 }
 
-@keyframes scroll-text {
+@keyframes scrollText {
   from {
     transform: translateX(0);
   }
@@ -83,5 +80,14 @@
     --accent: var(--slate);
     --primary-content: var(--slate);
     --secondary-content: var(--slate);
+  }
+}
+
+@layer utilities {
+  .animate-scroll-text {
+    animation: scrollText 30s linear infinite;
+  }
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-in-out forwards;
   }
 }
