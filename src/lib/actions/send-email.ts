@@ -1,14 +1,13 @@
 "use server";
-import { Resend } from "resend";
+// import { Resend } from "resend";
 import { validateForm } from "@/lib/utils/validate-form";
-import { EmailTemplate } from "@/components/EmailTemplate";
 
 const { RESEND_API_KEY, RESEND_FROM, RESEND_TO } = process.env;
 
 if (!RESEND_API_KEY || !RESEND_FROM || !RESEND_TO)
   throw new Error("Missing environment variables!");
 
-const resend = new Resend(RESEND_API_KEY);
+// const resend = new Resend(RESEND_API_KEY);
 
 export const sendEmail = async (e: FormData) => {
   const email = e.get("email")?.toString().trim();
@@ -18,12 +17,12 @@ export const sendEmail = async (e: FormData) => {
   try {
     const validatedData = validateForm({ email, name, message });
     if (Array.isArray(validatedData)) return { error: validatedData };
-    await resend.emails.send({
-      from: RESEND_FROM,
-      to: RESEND_TO,
-      subject: `New message from ${validatedData.name}!`,
-      react: EmailTemplate(validatedData),
-    });
+    // await resend.emails.send({
+    //   from: RESEND_FROM,
+    //   to: RESEND_TO,
+    //   subject: `New message from ${validatedData.name}!`,
+    //   react: EmailTemplate(validatedData),
+    // });
     return {
       message: ["Message was sent! Will be in touch in the near future."],
     };

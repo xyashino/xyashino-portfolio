@@ -1,57 +1,87 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
+@theme {
+  --animation-scrollText: scrollText 21s linear infinite;
+  --animation-fadeIn: fadeIn 0.3s ease-in-out forwards;
 
-
-@layer components {
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+  --color-primary: var(--primary);
+  --color-primary-content: var(--primary-content);
+  --color-secondary: var(--secondary);
+  --color-secondary-content: var(--secondary-content);
+  --color-accent: var(--accent);
+  --color-yellow: var(--yellow);
+  --color-blue: var(--blue);
+  --color-black: var(--black);
+  --color-white: var(--white);
 }
 
+@keyframes scroll-text {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer components {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 
 @layer base {
-    * {
-        box-sizing: border-box;
-    }
-    :root , .black {
-        --black: 0 0% 0%;
-        --slate: 240 7% 11%;
-        --white: 0 0% 100%;
-        --yellow: 55 100% 75%;
-        --blue: 251 100% 45%;
-        --primary: var(--black);
-        --secondary: var(--yellow);
-        --accent: var(--slate);
-        --primary-content: var(--white);
-        --secondary-content: var(--black);
-    }
-    .white {
-        --primary: var(--white);
-        --secondary: var(--blue);
-        --accent: var(--slate);
-        --primary-content: var(--black);
-        --secondary-content: var(--white);
-    }
-    .blue {
-        --primary: var(--blue);
-        --secondary: var(--white);
-        --accent: var(--slate);
-        --primary-content: var(--white);
-        --secondary-content: var(--black);
-    }
+  * {
+    box-sizing: border-box;
+  }
+  :root,
+  .black {
+    --black: hsl(0 0% 0%);
+    --slate: hsl(240 7% 11%);
+    --white: hsl(0 0% 100%);
+    --yellow: hsl(55, 76%, 61%);
+    --blue: hsl(251 100% 45%);
+    --primary: var(--black);
+    --secondary: var(--yellow);
+    --accent: var(--slate);
+    --primary-content: var(--white);
+    --secondary-content: var(--black);
+  }
+  .white {
+    --primary: var(--white);
+    --secondary: var(--blue);
+    --accent: var(--slate);
+    --primary-content: var(--black);
+    --secondary-content: var(--white);
+  }
+  .blue {
+    --primary: var(--blue);
+    --secondary: var(--white);
+    --accent: var(--slate);
+    --primary-content: var(--white);
+    --secondary-content: var(--black);
+  }
 
-    .yellow {
-        --primary: var(--yellow);
-        --secondary: var(--white);
-        --accent: var(--slate);
-        --primary-content: var(--slate);
-        --secondary-content: var(--slate);
-    }
+  .yellow {
+    --primary: var(--yellow);
+    --secondary: var(--white);
+    --accent: var(--slate);
+    --primary-content: var(--slate);
+    --secondary-content: var(--slate);
+  }
 }

@@ -1,8 +1,7 @@
-import React from "react";
 export const InfiniteScrollText = ({ text }: { text: string }) => {
   return (
     <div className="absolute inset-0 flex z-0 select-none w-screen">
-      <div className="flex whitespace-nowrap animate-scrollText ">
+      <div className="flex whitespace-nowrap animate-scroll-text">
         {Array.from({ length: 3 }).map((_, i) => (
           <p
             key={i}

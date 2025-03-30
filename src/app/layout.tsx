@@ -1,10 +1,8 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils/cn";
+import { GeistSans } from "geist/font/sans";
+import type { Metadata } from "next";
 import { PropsWithChildren } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "xyashino portfolio",
@@ -13,11 +11,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          inter.className,
-          "w-screen h-[100dvh]  overflow-hidden relative bg-primary",
+          GeistSans.className,
+          "w-screen h-svh overflow-hidden relative bg-primary",
         )}
       >
         {children}
