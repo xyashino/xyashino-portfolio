@@ -1,5 +1,5 @@
-import {ResumeDialog} from "@/components/dialogs/ResumeDialog";
-import {InfiniteScrollText} from "@/components/infinite-scroll-text";
+import { ResumeDialog } from "@/components/dialogs/ResumeDialog";
+import { InfiniteScrollText } from "@/components/infinite-scroll-text";
 
 const {
   NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT,
@@ -15,7 +15,7 @@ if (!NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT)
 
 export const InfoSection = () => {
   return (
-    <section className='w-full grow justify-center flex flex-col relative overflow-hidden'>
+    <section className="w-full grow justify-center flex flex-col relative overflow-hidden">
       <ResumeDialog
         polishResumeUrl={NEXT_PUBLIC_RESUME_URL_PL}
         englishResumeUrl={NEXT_PUBLIC_RESUME_URL_EN}

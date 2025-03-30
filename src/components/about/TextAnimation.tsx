@@ -1,10 +1,10 @@
 "use client";
-import {DomAnimation} from "@/components/dom-animation";
+import { DomAnimation } from "@/components/dom-animation";
 import {
   textContainerVariant,
   wordVariant,
 } from "@/lib/framer-variants/text-animation";
-import {m} from "framer-motion";
+import { m } from "framer-motion";
 
 interface Props {
   words: string[];
