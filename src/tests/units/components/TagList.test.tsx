@@ -1,6 +1,6 @@
-import {TagList} from "@/components/tag-list";
-import {render, screen} from "@testing-library/react";
-import {beforeEach, describe, expect, test} from "vitest";
+import { TagList } from "@/components/tag-list";
+import { render, screen } from "@testing-library/react";
+import { beforeEach, describe, expect, test } from "vitest";
 
 describe("TagList", () => {
   const tags = ["test", "test2", "test3"];
