@@ -1,5 +1,5 @@
 import { ContrastCard } from '@/components/contrast-card'
-import { Arrow } from '@/components/icons/Arrow'
+import { Arrow } from '@/components/icons/arrow'
 import { YoutubeIframe } from '@/components/projects/youtube-iframe'
 import { TagList } from '@/components/tag-list'
 import { Navigation } from '@/lib/enum/navigation'

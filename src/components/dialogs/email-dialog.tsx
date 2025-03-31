@@ -1,5 +1,5 @@
 import { Dialog } from '@/components/dialogs/dialog'
-import { Loading } from '@/components/icons/Loading'
+import { Loading } from '@/components/icons/loading'
 
 export interface ResultDialogProps {
   isOpen: boolean

@@ -1,4 +1,4 @@
-import { Loading } from '@/components/icons/Loading'
+import { Loading } from '@/components/icons/loading'
 import { cn } from '@/lib/utils/cn'
 
 interface Props {

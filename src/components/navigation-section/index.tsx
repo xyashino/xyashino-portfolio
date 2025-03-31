@@ -2,9 +2,9 @@ import {
   Contact,
   Project,
   Question,
-  Stack,
-} from "@/components/icons/navigation";
-import { NavigationItem } from "@/components/navigation-section/navigation-item";
+  Stack
+} from '@/components/icons/navigation'
+import { NavigationItem } from '@/components/navigation-section/navigation-item'
 import { Navigation } from '@/lib/enum/navigation'
 
 export const NavigationSection = () => {
@@ -39,5 +39,5 @@ export const NavigationSection = () => {
         theme="black"
       />
     </section>
-  );
-};
+  )
+}

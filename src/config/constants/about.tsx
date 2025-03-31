@@ -2,7 +2,6 @@ import { SlideItem } from '@/types/slide'
 
 export const EDUCATION_DESCRIPTION = `Hello! I'm a 21-year-old IT student eager to start a full-time role in the industry. Acctualy i work as Software Developer in Corporation. I want to  My GitHub and personal website display my programming projects, emphasizing my proficiency in TypeScript, a technology I prefer for its flexibility in both functional and OOP programming. I have 1 year of experience in Software Development and I want to learn more about Frontend Development.`
 
-
 export const About: SlideItem[] = [
   {
     title: 'PCEIKZ Szczucin',

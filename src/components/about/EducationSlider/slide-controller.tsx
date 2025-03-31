@@ -1,5 +1,4 @@
-import { Arrow } from '@/components/icons/Arrow'
-import React from 'react'
+import { Arrow } from '@/components/icons/arrow'
 
 interface Props {
   changeSlide: () => void
