@@ -1,6 +1,8 @@
 import { SlideItem } from '@/types/slide'
 
-export const EDUCATION_DESCRIPTION = `Hello! I'm a 20-year-old IT student eager to start a full-time role in the industry. My GitHub and personal website display my programming projects, emphasizing my proficiency in TypeScript, a technology I prefer for its flexibility in both functional and OOP programming. This choice reflects my ability to easily adapt to different technologies. While I haven't yet had the chance to gain commercial experience, I’m actively acquiring skills on my own. My drive to learn and grow is immense. Give me the opportunity, and I will dedicate myself to becoming a more skilled programmer every day.`
+export const EDUCATION_DESCRIPTION = `Hello! I'm a 21-year-old IT student eager to start a full-time role in the industry. Acctualy i work as Software Developer in Corporation. I want to  My GitHub and personal website display my programming projects, emphasizing my proficiency in TypeScript, a technology I prefer for its flexibility in both functional and OOP programming. I have 1 year of experience in Software Development and I want to learn more about Frontend Development.`
+
+
 export const About: SlideItem[] = [
   {
     title: 'PCEIKZ Szczucin',
@@ -22,12 +24,6 @@ export const About: SlideItem[] = [
   {
     title: 'WSB NLU',
     subtitle: '2023-2027',
-    content: '1st year of engineering studies in Computer Science, in progress.'
-  },
-  {
-    title: 'OPANUJ FRONT-END AI EDITION:',
-    subtitle: '2024 UPCOMING',
-    content:
-      'Course focuses on advanced frontend development skills, emphasizing frontend architecture, best practices, and quality engineering.'
+    content: '2st year of engineering studies in Computer Science, in progress.'
   }
 ]
