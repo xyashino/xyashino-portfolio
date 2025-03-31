@@ -1,16 +1,15 @@
 import {
+  Database,
+  Express,
+  GraphQL,
   NestJs,
   NextJs,
   NodeJs,
   React,
   Tailwindcss,
   Typescript,
-  Zustand,
-  Database,
-  GraphQL,
-  Express,
   Vitest,
-  ReactTestingLibrary
+  Zustand
 } from '@/components/icons/stack'
 
 export const MAIN_TECHNOLOGIES = [
@@ -75,9 +74,5 @@ export const OTHER_TECHNOLOGIES = [
   {
     name: 'Vitest',
     icon: <Vitest />
-  },
-  {
-    name: 'R.T.L.',
-    icon: <ReactTestingLibrary />
   }
 ]
