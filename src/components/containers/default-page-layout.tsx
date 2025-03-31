@@ -1,6 +1,6 @@
 import { Home } from "@/components/icons/navigation/Home";
 import { cn } from "@/lib/utils/cn";
-import { Navigation } from "@/types/enum/navigation";
+import { Navigation } from "@/lib/enum/navigation";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
 

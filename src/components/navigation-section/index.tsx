@@ -5,7 +5,7 @@ import {
   Stack,
 } from "@/components/icons/navigation";
 import { NavigationItem } from "@/components/navigation-section/navigation-item";
-import { Navigation } from "@/types/enum/navigation";
+import { Navigation } from '@/lib/enum/navigation'
 
 export const NavigationSection = () => {
   return (

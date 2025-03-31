@@ -3,5 +3,5 @@ export enum Navigation {
   About = '/about',
   Contact = '/contact',
   Projects = '/projects',
-  Experience = '/experience'
+  Stack = '/stack'
 }

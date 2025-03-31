@@ -1,26 +1,21 @@
-import { ResumeDialog } from '@/components/dialogs/resume-dialog'
 import { InfiniteScrollText } from '@/components/infinite-scroll-text'
-
-const {
-  NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT,
-  NEXT_PUBLIC_RESUME_URL_PL,
-  NEXT_PUBLIC_RESUME_URL_EN
-} = process.env
-
-if (!NEXT_PUBLIC_RESUME_URL_PL || !NEXT_PUBLIC_RESUME_URL_EN) {
-  throw new Error('Missing resume url')
-}
-if (!NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT)
-  throw new Error('Missing background text')
+import { StyledLink } from '@/components/styled-link'
+const { NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT, NEXT_PUBLIC_RESUME_URL } =
+  process.env
 
 export const InfoSection = () => {
   return (
     <section className="w-full grow justify-center flex flex-col relative overflow-hidden">
-      <ResumeDialog
-        polishResumeUrl={NEXT_PUBLIC_RESUME_URL_PL}
-        englishResumeUrl={NEXT_PUBLIC_RESUME_URL_EN}
+      <StyledLink
+        className="mx-auto"
+        href={NEXT_PUBLIC_RESUME_URL as string}
+        textClassName="text-xl md:text-2xl lg:text-5xl"
+      >
+        Get my Resume
+      </StyledLink>
+      <InfiniteScrollText
+        text={NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT as string}
       />
-      <InfiniteScrollText text={NEXT_PUBLIC_BACKGROUND_ANIMATED_TEXT} />
     </section>
   )
 }
