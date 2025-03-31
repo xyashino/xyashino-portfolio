@@ -2,16 +2,14 @@ import { ContrastCard } from '@/components/contrast-card'
 import { Arrow } from '@/components/icons/Arrow'
 import { YoutubeIframe } from '@/components/projects/youtube-iframe'
 import { TagList } from '@/components/tag-list'
-import { getArticleByFileName, getArticleNames } from '@/lib/mdx'
 import { Navigation } from '@/lib/enum/navigation'
+import { getArticleByFileName, getArticleNames } from '@/lib/mdx'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 type ParamsWithName = {
-  params: {
-    name: string
-  }
+  params: Promise<{ name: string }>
 }
 
 const { PROJECTS_DIR_PATH } = process.env
@@ -23,7 +21,7 @@ export const generateStaticParams = async () =>
 export default async function ProjectPage({ params }: ParamsWithName) {
   const { PROJECTS_DIR_PATH } = process.env
   if (!PROJECTS_DIR_PATH) throw new Error('Missing projects dir path')
-  const name = (await params).name
+  const { name } = await params
   const article = await getArticleByFileName<ProjectMetadata>(
     name,
     PROJECTS_DIR_PATH
