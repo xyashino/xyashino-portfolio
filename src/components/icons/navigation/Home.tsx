@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react'
 
 export const Home = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -10,4 +10,4 @@ export const Home = (props: SVGProps<SVGSVGElement>) => (
   >
     <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8h5z"></path>
   </svg>
-);
+)

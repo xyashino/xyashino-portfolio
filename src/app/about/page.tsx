@@ -1,8 +1,7 @@
-import React from "react";
-import { DefaultPageLayout } from "@/components/containers/DefaultPageLayout";
-import { EducationSlider } from "@/components/about/EducationSlider";
-import { TextAnimation } from "@/components/about/TextAnimation";
-import { About, EDUCATION_DESCRIPTION } from "@/config/constants/about";
+import { EducationSlider } from '@/components/about/EducationSlider'
+import { TextAnimation } from '@/components/about/text-animation'
+import { DefaultPageLayout } from '@/components/containers/default-page-layout'
+import { About, EDUCATION_DESCRIPTION } from '@/config/constants/about'
 
 export default function Projects() {
   return (
@@ -14,9 +13,9 @@ export default function Projects() {
       containerClassName="flex flex-col justify-evenly items-center h-auto lg:h-full p-0 mb-4"
     >
       <section className="w-11/12 lg:w-5/6 mx-auto">
-        <TextAnimation words={EDUCATION_DESCRIPTION.split(" ")} />
+        <TextAnimation words={EDUCATION_DESCRIPTION.split(' ')} />
       </section>
       <EducationSlider slides={About} />
     </DefaultPageLayout>
-  );
+  )
 }

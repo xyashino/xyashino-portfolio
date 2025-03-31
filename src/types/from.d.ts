@@ -1,9 +1,9 @@
 interface FormValues {
-  name?: string | null;
-  email?: string | null;
-  message?: string | null;
+  name?: string | null
+  email?: string | null
+  message?: string | null
 }
 
-type FormValidationSuccessResult = NotNullish<FormValues>;
+type FormValidationSuccessResult = NotNullish<FormValues>
 
-type FormValidationResult = string[] | FormValidationSuccessResult;
+type FormValidationResult = string[] | FormValidationSuccessResult

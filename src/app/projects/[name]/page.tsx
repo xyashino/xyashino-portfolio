@@ -1,39 +1,37 @@
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { getArticleByFileName, getArticleNames } from "@/lib/mdx";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { Arrow } from "@/components/icons/Arrow";
-import { YoutubeIframe } from "@/components/projects/YoutubeIframe";
-import { TagList } from "@/components/TagList";
-import { Navigation } from "@/types/enum/navigation";
-import { ContrastCard } from "@/components/ContrastCard";
+import { ContrastCard } from '@/components/contrast-card'
+import { Arrow } from '@/components/icons/Arrow'
+import { YoutubeIframe } from '@/components/projects/youtube-iframe'
+import { TagList } from '@/components/tag-list'
+import { getArticleByFileName, getArticleNames } from '@/lib/mdx'
+import { Navigation } from '@/lib/enum/navigation'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
 type ParamsWithName = {
   params: {
-    name: string;
-  };
-};
+    name: string
+  }
+}
 
-const { PROJECTS_DIR_PATH } = process.env;
-if (!PROJECTS_DIR_PATH) throw new Error("Missing projects dir path");
+const { PROJECTS_DIR_PATH } = process.env
+if (!PROJECTS_DIR_PATH) throw new Error('Missing projects dir path')
 
 export const generateStaticParams = async () =>
-  getArticleNames(PROJECTS_DIR_PATH);
+  getArticleNames(PROJECTS_DIR_PATH)
 
-export default async function ArticlePage({
-  params: { name },
-}: ParamsWithName) {
-  const { PROJECTS_DIR_PATH } = process.env;
-  if (!PROJECTS_DIR_PATH) throw new Error("Missing projects dir path");
-
+export default async function ProjectPage({ params }: ParamsWithName) {
+  const { PROJECTS_DIR_PATH } = process.env
+  if (!PROJECTS_DIR_PATH) throw new Error('Missing projects dir path')
+  const name = (await params).name
   const article = await getArticleByFileName<ProjectMetadata>(
     name,
-    PROJECTS_DIR_PATH,
-  );
+    PROJECTS_DIR_PATH
+  )
 
-  if (!article) return notFound();
+  if (!article) return notFound()
 
-  const { content, data } = article;
+  const { content, data } = article
 
   return (
     <div className="w-full h-full relative overflow-y-scroll no-scrollbar bg-white selection:bg-yellow selection:text-accent">
@@ -44,7 +42,7 @@ export default async function ArticlePage({
         >
           <Arrow className="rotate-180" />
         </Link>
-        <h1 className="ml-auto text-2xl lg:text-7xl uppercase  mx-auto font-extrabold font-mono italic break-words text-left">
+        <h1 className="ml-auto text-2xl lg:text-7xl uppercase mx-auto font-extrabold font-mono italic break-words text-left">
           {data.title}
         </h1>
       </header>
@@ -56,10 +54,10 @@ export default async function ArticlePage({
           </ContrastCard>
           <TagList tags={data.tags} />
         </div>
-        <article className=" p-2 prose lg:prose-xl mx-auto prose-a:text-blue prose-code:font-extrabold mt-4">
+        <article className="p-2 prose lg:prose-xl mx-auto prose-a:text-blue prose-code:font-extrabold mt-4">
           <MDXRemote source={content} />
         </article>
       </section>
     </div>
-  );
+  )
 }

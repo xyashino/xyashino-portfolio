@@ -1,4 +1,4 @@
-import { Variants } from "framer-motion";
+import { Variants } from 'framer-motion'
 
 export const textContainerVariant: Variants = {
   hidden: { opacity: 0 },
@@ -6,28 +6,28 @@ export const textContainerVariant: Variants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.12,
-      delayChildren: i * 0.1,
-    },
-  }),
-};
+      delayChildren: i * 0.1
+    }
+  })
+}
 
 export const wordVariant: Variants = {
   visible: {
     opacity: 1,
     x: 0,
     transition: {
-      type: "spring",
+      type: 'spring',
       damping: 12,
-      stiffness: 100,
-    },
+      stiffness: 100
+    }
   },
   hidden: {
     opacity: 0,
     x: 20,
     transition: {
-      type: "spring",
+      type: 'spring',
       damping: 12,
-      stiffness: 100,
-    },
-  },
-} as Variants;
+      stiffness: 100
+    }
+  }
+} as Variants

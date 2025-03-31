@@ -1,8 +1,7 @@
-import React from "react";
-import { ContactForm } from "@/components/contact/ContactForm";
-import { ContactList } from "@/components/contact/ContactList";
-import { DefaultPageLayout } from "@/components/containers/DefaultPageLayout";
-import { ContrastCard } from "@/components/ContrastCard";
+import { ContactForm } from '@/components/contact/contact-form'
+import { ContactList } from '@/components/contact/contact-list'
+import { DefaultPageLayout } from '@/components/containers/default-page-layout'
+import { ContrastCard } from '@/components/contrast-card'
 
 export default function Projects() {
   return (
@@ -22,5 +21,5 @@ export default function Projects() {
       </div>
       <ContactForm />
     </DefaultPageLayout>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react'
 
 export const Loading = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -33,4 +33,4 @@ export const Loading = (props: SVGProps<SVGSVGElement>) => (
       ></animateTransform>
     </path>
   </svg>
-);
+)

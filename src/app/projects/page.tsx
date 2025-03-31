@@ -1,12 +1,12 @@
-import { DefaultPageLayout } from "@/components/containers/DefaultPageLayout";
-import { ProjectCard } from "@/components/projects/ProjectCard";
-import { getProjectsData } from "@/lib/mdx";
+import { DefaultPageLayout } from '@/components/containers/default-page-layout'
+import { ProjectCard } from '@/components/projects/project-card'
+import { getProjectsData } from '@/lib/mdx'
 
 export default async function Projects() {
-  const { PROJECTS_DIR_PATH } = process.env;
-  if (!PROJECTS_DIR_PATH) throw new Error("Missing projects dir path");
+  const { PROJECTS_DIR_PATH } = process.env
+  if (!PROJECTS_DIR_PATH) throw new Error('Missing projects dir path')
 
-  const projects = await getProjectsData<ProjectMetadata>(PROJECTS_DIR_PATH);
+  const projects = await getProjectsData<ProjectMetadata>(PROJECTS_DIR_PATH)
 
   return (
     <DefaultPageLayout
@@ -28,5 +28,5 @@ export default async function Projects() {
         ))}
       </div>
     </DefaultPageLayout>
-  );
+  )
 }

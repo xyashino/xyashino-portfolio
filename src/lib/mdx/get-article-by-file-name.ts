@@ -1,28 +1,28 @@
-"use server";
-import path from "path";
-import { readFile } from "node:fs/promises";
-import matter from "gray-matter";
+'use server'
+import path from 'path'
+import { readFile } from 'node:fs/promises'
+import matter from 'gray-matter'
 
 export interface ArticleResult<T> {
-  fileName: string;
-  content: string;
-  data: T;
+  fileName: string
+  content: string
+  data: T
 }
 
 export const getArticleByFileName = async <T>(
   fileName: string,
-  dirPath: string,
+  dirPath: string
 ): Promise<ArticleResult<T> | null> => {
-  const fullFilePath = path.join(process.cwd(), dirPath, `${fileName}.mdx`);
+  const fullFilePath = path.join(process.cwd(), dirPath, `${fileName}.mdx`)
   try {
-    const fileContent = await readFile(fullFilePath, "utf8");
-    const { content, data } = matter(fileContent);
+    const fileContent = await readFile(fullFilePath, 'utf8')
+    const { content, data } = matter(fileContent)
     return {
       fileName,
       data,
-      content,
-    } as ArticleResult<T>;
+      content
+    } as ArticleResult<T>
   } catch (e) {
-    return null;
+    return null
   }
-};
+}
