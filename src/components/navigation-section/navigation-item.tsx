@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState, useCallback } from 'react'
-import { Navigation } from '@/types/enum/navigation'
+import { Navigation } from '@/lib/enum/navigation'
 import { cn } from '@/lib/utils/cn'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/navigation'

@@ -1,5 +1,5 @@
-import { NavigationItem } from '@/components/NavigationSection/navigation-item'
-import { Navigation } from '@/types/enum/navigation'
+import { NavigationItem } from '@/components/navigation-section/navigation-item'
+import { Navigation } from '@/lib/enum/navigation'
 import { fireEvent, render, screen } from '@testing-library/react'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/navigation'

@@ -1,7 +1,7 @@
 import { YoutubeIframe } from '@/components/projects/youtube-iframe'
 import { TagList } from '@/components/tag-list'
+import { Navigation } from '@/lib/enum/navigation'
 import { cn } from '@/lib/utils/cn'
-import { Navigation } from '@/types/enum/navigation'
 import Link from 'next/link'
 import { ProjectCardAnimation } from './project-card-animation'
 
